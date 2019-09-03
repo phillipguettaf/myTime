@@ -15,6 +15,8 @@
 		FA238142231E44FC0060BC1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA238140231E44FC0060BC1F /* LaunchScreen.storyboard */; };
 		FA23814D231E44FD0060BC1F /* myTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23814C231E44FD0060BC1F /* myTimeTests.swift */; };
 		FA238158231E44FD0060BC1F /* myTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA238157231E44FD0060BC1F /* myTimeUITests.swift */; };
+		FA23816B231E50240060BC1F /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23816A231E50240060BC1F /* JournalEntry.swift */; };
+		FA23816D231E52B70060BC1F /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23816C231E52B70060BC1F /* Journal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		FA238153231E44FD0060BC1F /* myTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA238157231E44FD0060BC1F /* myTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTimeUITests.swift; sourceTree = "<group>"; };
 		FA238159231E44FD0060BC1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA23816A231E50240060BC1F /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
+		FA23816C231E52B70060BC1F /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +108,6 @@
 				FA238167231E454F0060BC1F /* ViewModel */,
 				FA238165231E45130060BC1F /* Model */,
 				FA23813E231E44FC0060BC1F /* Assets.xcassets */,
-				FA238140231E44FC0060BC1F /* LaunchScreen.storyboard */,
 				FA238143231E44FC0060BC1F /* Info.plist */,
 				FA23813B231E44F30060BC1F /* myTime.xcdatamodeld */,
 			);
@@ -132,6 +135,8 @@
 		FA238165231E45130060BC1F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FA23816A231E50240060BC1F /* JournalEntry.swift */,
+				FA23816C231E52B70060BC1F /* Journal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 		FA238166231E45460060BC1F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA238140231E44FC0060BC1F /* LaunchScreen.storyboard */,
 				FA238138231E44F30060BC1F /* Main.storyboard */,
 			);
 			path = View;
@@ -284,7 +290,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA238137231E44F30060BC1F /* ViewController.swift in Sources */,
+				FA23816D231E52B70060BC1F /* Journal.swift in Sources */,
 				FA23813D231E44F30060BC1F /* myTime.xcdatamodeld in Sources */,
+				FA23816B231E50240060BC1F /* JournalEntry.swift in Sources */,
 				FA238135231E44F30060BC1F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
