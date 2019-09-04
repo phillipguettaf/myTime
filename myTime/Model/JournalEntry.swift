@@ -15,13 +15,20 @@ class JournalEntry {
     }
  
     private let CREATION_DATE:Date
-    private var mood:Mood?
+    private var mood:Mood? {
+        get {
+            return self.mood
+        }
+        set(newMood) {
+            self.mood = newMood
+        }
+    }
     private var content:String?
     
     init() {
-        CREATION_DATE = Date()
-        mood = nil
-        content = nil
+        self.CREATION_DATE = Date()
+        self.mood = nil
+        self.content = nil
     }
     
 }
