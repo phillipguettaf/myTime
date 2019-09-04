@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Journal {
+class JournalPage {
 
     private var page:[JournalEntry]
     private var averageMood:Float
