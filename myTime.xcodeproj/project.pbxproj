@@ -76,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93541586231F31B100A6E2AF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA238167231E454F0060BC1F /* ViewModel */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		FA238128231E44F30060BC1F = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +107,9 @@
 		FA238133231E44F30060BC1F /* myTime */ = {
 			isa = PBXGroup;
 			children = (
+				93541586231F31B100A6E2AF /* Controller */,
 				FA238134231E44F30060BC1F /* AppDelegate.swift */,
 				FA238166231E45460060BC1F /* View */,
-				FA238167231E454F0060BC1F /* ViewModel */,
 				FA238165231E45130060BC1F /* Model */,
 				FA23813E231E44FC0060BC1F /* Assets.xcassets */,
 				FA238140231E44FC0060BC1F /* LaunchScreen.storyboard */,
