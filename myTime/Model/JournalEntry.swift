@@ -10,20 +10,16 @@ import Foundation
 
 class JournalEntry {
     
-    enum Mood {
-        case verysad, sad, happy, veryhappy
+    enum Mood:Float {
+        case verysad = 0.0
+        case sad = 1.0
+        case happy = 2.0
+        case veryhappy = 3.0
     }
  
-    private let CREATION_DATE:Date
-    private var mood:Mood? {
-        get {
-            return self.mood
-        }
-        set(newMood) {
-            self.mood = newMood
-        }
-    }
-    private var content:String?
+    let CREATION_DATE:Date
+    var mood:Mood?
+    var content:String?
     
     init() {
         self.CREATION_DATE = Date()

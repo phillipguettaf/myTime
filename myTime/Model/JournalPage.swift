@@ -19,15 +19,16 @@ class JournalPage {
     }
     
     func calculateAverageMood() {
-        let numberOfEntries = page.count == 0 ? -1:page.count
-        var totalMood:Int = 0
+        let numberOfEntries = page.count
         if numberOfEntries == 0 {
             averageMood = -1
         } else {
+            var totalMood:Float = 0
             for entry in page {
-            // (to be implemented with getMood)    totalMood += entry.mood
+                guard let entryMood = entry.mood else {return}
+                totalMood += entryMood.rawValue
             }
-            averageMood = (Float) (totalMood/numberOfEntries)
+            averageMood = totalMood / Float(numberOfEntries)
         }
         
     }

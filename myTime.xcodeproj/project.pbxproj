@@ -16,7 +16,7 @@
 		FA23814D231E44FD0060BC1F /* myTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23814C231E44FD0060BC1F /* myTimeTests.swift */; };
 		FA238158231E44FD0060BC1F /* myTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA238157231E44FD0060BC1F /* myTimeUITests.swift */; };
 		FA23816B231E50240060BC1F /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23816A231E50240060BC1F /* JournalEntry.swift */; };
-		FA23816D231E52B70060BC1F /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23816C231E52B70060BC1F /* Journal.swift */; };
+		FA3BADA5232155EE00FD5D2F /* JournalPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BADA4232155EE00FD5D2F /* JournalPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		FA238157231E44FD0060BC1F /* myTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTimeUITests.swift; sourceTree = "<group>"; };
 		FA238159231E44FD0060BC1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA23816A231E50240060BC1F /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
-		FA23816C231E52B70060BC1F /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
+		FA3BADA4232155EE00FD5D2F /* JournalPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				FA23816A231E50240060BC1F /* JournalEntry.swift */,
-				FA23816C231E52B70060BC1F /* Journal.swift */,
+				FA3BADA4232155EE00FD5D2F /* JournalPage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -290,7 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA238137231E44F30060BC1F /* ViewController.swift in Sources */,
-				FA23816D231E52B70060BC1F /* Journal.swift in Sources */,
+				FA3BADA5232155EE00FD5D2F /* JournalPage.swift in Sources */,
 				FA23813D231E44F30060BC1F /* myTime.xcdatamodeld in Sources */,
 				FA23816B231E50240060BC1F /* JournalEntry.swift in Sources */,
 				FA238135231E44F30060BC1F /* AppDelegate.swift in Sources */,
