@@ -25,8 +25,7 @@ class JournalPage {
         } else {
             var totalMood:Float = 0
             for entry in page {
-                guard let entryMood = entry.mood else {return}
-                totalMood += entryMood.rawValue
+                totalMood += entry.mood
             }
             averageMood = totalMood / Float(numberOfEntries)
         }
