@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--JournalSelectMonth-->
+        <!--JournalMonthView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="JournalSelectMonth" id="BYZ-38-t0r" customClass="ViewController" customModule="myTime" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="JournalMonthView" id="BYZ-38-t0r" customClass="ViewController" customModule="myTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -264,10 +264,10 @@
             </objects>
             <point key="canvasLocation" x="259" y="254"/>
         </scene>
-        <!--JournalEntry-->
+        <!--JournalEntryView-->
         <scene sceneID="h7m-aF-VVz">
             <objects>
-                <viewController title="JournalEntry" id="BGw-hO-a53" customClass="ViewController" customModule="myTime" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="JournalEntryView" id="BGw-hO-a53" customClass="JournalEntryView" customModule="myTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CZS-lb-ula">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -279,6 +279,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="6q3-tX-8du"/>
                                     <constraint firstAttribute="height" constant="30" id="zZc-jj-8P5"/>
                                 </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <color key="barTintColor" red="0.12780109049999999" green="0.31013342739999999" blue="0.3162297308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem id="iQ2-Xk-w2H">
@@ -287,16 +288,29 @@
                                                 <segue destination="xeb-vF-ucN" kind="show" id="ZBc-2j-Ykm"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Mood" id="8lq-Pd-CSl"/>
+                                        <rightBarButtonItems>
+                                            <barButtonItem systemItem="save" id="N5s-SW-rU3">
+                                                <connections>
+                                                    <action selector="onSubmit:" destination="BGw-hO-a53" id="MGg-na-b0L"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Mood" image="Mood3Medium" id="8lq-Pd-CSl">
+                                                <connections>
+                                                    <action selector="selectMood:" destination="BGw-hO-a53" id="dnP-TD-PDq"/>
+                                                    <segue destination="Mdz-es-aSj" kind="popoverPresentation" identifier="moodPopover" popoverAnchorBarButtonItem="8lq-Pd-CSl" id="WiA-ok-DYe">
+                                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                    </segue>
+                                                </connections>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lAT-iz-NzF">
-                                <rect key="frame" x="30" y="90" width="260" height="478"/>
+                                <rect key="frame" x="30" y="100" width="260" height="468"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.12780109047889709" green="0.3101334273815155" blue="0.31622973084449768" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -305,21 +319,27 @@
                             <constraint firstItem="rxz-vU-Sjo" firstAttribute="top" secondItem="HoG-cA-diK" secondAttribute="top" constant="20" id="ItS-OR-bRL"/>
                             <constraint firstItem="lAT-iz-NzF" firstAttribute="leading" secondItem="HoG-cA-diK" secondAttribute="leading" constant="30" id="LNU-wk-Ubb"/>
                             <constraint firstItem="HoG-cA-diK" firstAttribute="bottom" secondItem="lAT-iz-NzF" secondAttribute="bottom" id="Poi-oR-iA7"/>
-                            <constraint firstItem="lAT-iz-NzF" firstAttribute="top" secondItem="rxz-vU-Sjo" secondAttribute="bottom" constant="20" id="aGd-mS-YZb"/>
+                            <constraint firstItem="lAT-iz-NzF" firstAttribute="top" secondItem="rxz-vU-Sjo" secondAttribute="bottom" constant="30" id="aGd-mS-YZb"/>
                             <constraint firstItem="HoG-cA-diK" firstAttribute="trailing" secondItem="lAT-iz-NzF" secondAttribute="trailing" constant="30" id="dcW-AO-DUl"/>
                             <constraint firstItem="rxz-vU-Sjo" firstAttribute="trailing" secondItem="HoG-cA-diK" secondAttribute="trailing" id="iMy-1E-nop"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HoG-cA-diK"/>
                     </view>
+                    <connections>
+                        <outlet property="back" destination="6CK-mb-8qZ" id="B0v-D9-wEd"/>
+                        <outlet property="journalEntryInput" destination="lAT-iz-NzF" id="H7L-hW-uFz"/>
+                        <outlet property="moodSelect" destination="8lq-Pd-CSl" id="mC2-0d-AF7"/>
+                        <outlet property="save" destination="N5s-SW-rU3" id="WQM-xG-fAZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jiv-JB-clO" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2136" y="-469"/>
         </scene>
-        <!--JournalSelectList-->
+        <!--JournalTableView-->
         <scene sceneID="iqD-yA-4Dp">
             <objects>
-                <viewController title="JournalSelectList" id="n8d-cn-bwf" customClass="ViewController" customModule="myTime" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="JournalTableView" id="n8d-cn-bwf" customClass="ViewController" customModule="myTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cFA-89-oTX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -334,7 +354,11 @@
                                 <items>
                                     <navigationItem id="d4C-J3-Xxq">
                                         <barButtonItem key="leftBarButtonItem" title="Item" id="8Zz-ee-Z6y"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="CXG-uZ-NTW"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="CXG-uZ-NTW">
+                                            <connections>
+                                                <segue destination="BGw-hO-a53" kind="presentation" id="yF4-23-EHT"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -428,12 +452,104 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zlU-6k-Mc0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2136" y="-1232"/>
+            <point key="canvasLocation" x="1661" y="-1307"/>
+        </scene>
+        <!--MoodOptionView-->
+        <scene sceneID="3F4-7T-Utd">
+            <objects>
+                <viewController storyboardIdentifier="moodOptionsViewController" title="MoodOptionView" modalTransitionStyle="crossDissolve" modalPresentationStyle="pageSheet" id="Mdz-es-aSj" customClass="MoodOptionView" customModule="myTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aD9-3v-mW1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xls-eD-dZ4">
+                                <rect key="frame" x="73" y="264" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="FSD-r5-VDS"/>
+                                    <constraint firstAttribute="height" constant="40" id="Seu-ud-stP"/>
+                                </constraints>
+                                <state key="normal" image="Mood2Sad"/>
+                                <connections>
+                                    <action selector="onSadTapped:" destination="Mdz-es-aSj" eventType="touchUpInside" id="qzQ-cL-qBl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7H-0R-rpZ">
+                                <rect key="frame" x="207" y="264" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="pnu-b8-F0y"/>
+                                    <constraint firstAttribute="width" constant="40" id="ud4-vv-V7H"/>
+                                </constraints>
+                                <state key="normal" image="Mood4Happy"/>
+                                <connections>
+                                    <action selector="onHappyTapped:" destination="Mdz-es-aSj" eventType="touchUpInside" id="3Es-HJ-S8E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byO-XF-u4p">
+                                <rect key="frame" x="274" y="264" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="KDk-8r-G9t"/>
+                                    <constraint firstAttribute="height" constant="40" id="unr-iB-dkf"/>
+                                </constraints>
+                                <state key="normal" image="Mood5VHappy"/>
+                                <connections>
+                                    <action selector="onVHappyTapped:" destination="Mdz-es-aSj" eventType="touchUpInside" id="ly2-bb-npM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODd-FI-ZWo">
+                                <rect key="frame" x="140" y="264" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="oat-Sn-XVo"/>
+                                    <constraint firstAttribute="width" constant="40" id="oqc-Vi-uV1"/>
+                                </constraints>
+                                <state key="normal" image="Mood3Medium"/>
+                                <connections>
+                                    <action selector="onMediumTapped:" destination="Mdz-es-aSj" eventType="touchUpInside" id="oRf-fx-08G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69c-NT-kCW">
+                                <rect key="frame" x="6" y="264" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="99z-IP-ddc"/>
+                                    <constraint firstAttribute="height" constant="40" id="tSl-gx-Ce9"/>
+                                </constraints>
+                                <state key="normal" image="Mood1VSad"/>
+                                <connections>
+                                    <action selector="onVSadTapped:" destination="Mdz-es-aSj" eventType="touchUpInside" id="TQg-Ql-daH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="byO-XF-u4p" firstAttribute="centerY" secondItem="aD9-3v-mW1" secondAttribute="centerY" id="BC0-BA-skS"/>
+                            <constraint firstItem="M7H-0R-rpZ" firstAttribute="centerY" secondItem="aD9-3v-mW1" secondAttribute="centerY" id="MjS-Me-fXF"/>
+                            <constraint firstItem="xls-eD-dZ4" firstAttribute="leading" secondItem="69c-NT-kCW" secondAttribute="trailing" constant="27" id="Ni5-8q-HNL"/>
+                            <constraint firstItem="ODd-FI-ZWo" firstAttribute="centerY" secondItem="aD9-3v-mW1" secondAttribute="centerY" id="VAk-6L-xYv"/>
+                            <constraint firstItem="M7H-0R-rpZ" firstAttribute="leading" secondItem="ODd-FI-ZWo" secondAttribute="trailing" constant="27" id="Yrw-Wa-qXk"/>
+                            <constraint firstItem="xls-eD-dZ4" firstAttribute="centerY" secondItem="aD9-3v-mW1" secondAttribute="centerY" id="deH-cj-gaT"/>
+                            <constraint firstItem="byO-XF-u4p" firstAttribute="leading" secondItem="M7H-0R-rpZ" secondAttribute="trailing" constant="27" id="dkh-O1-Gui"/>
+                            <constraint firstItem="69c-NT-kCW" firstAttribute="centerY" secondItem="aD9-3v-mW1" secondAttribute="centerY" id="gPD-gJ-hqb"/>
+                            <constraint firstItem="ODd-FI-ZWo" firstAttribute="centerX" secondItem="aD9-3v-mW1" secondAttribute="centerX" id="ghx-Qu-v7w"/>
+                            <constraint firstItem="ODd-FI-ZWo" firstAttribute="leading" secondItem="xls-eD-dZ4" secondAttribute="trailing" constant="27" id="lDw-eD-cj9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8hz-Jv-hQD"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="320" height="50"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MR3-Wj-bRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2976" y="-469"/>
         </scene>
     </scenes>
     <resources>
-        <image name="JournalIcon" width="512" height="512"/>
-        <image name="MeditationIcon" width="512" height="512"/>
-        <image name="ProfileIcon" width="512" height="512"/>
+        <image name="JournalIcon" width="24" height="27"/>
+        <image name="MeditationIcon" width="27" height="23"/>
+        <image name="Mood1VSad" width="27" height="27"/>
+        <image name="Mood2Sad" width="27" height="27"/>
+        <image name="Mood3Medium" width="27" height="27"/>
+        <image name="Mood4Happy" width="27" height="27"/>
+        <image name="Mood5VHappy" width="27" height="27"/>
+        <image name="ProfileIcon" width="23" height="27"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="yF4-23-EHT"/>
+    </inferredMetricsTieBreakers>
 </document>
