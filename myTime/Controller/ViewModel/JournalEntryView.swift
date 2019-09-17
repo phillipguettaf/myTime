@@ -54,6 +54,7 @@ class JournalEntryView: UIViewController, UIPopoverPresentationControllerDelegat
             entry.timeStamp = currentDate as NSDate
             
             JournalContainer.saveContext()
+            self.dismiss(animated: true, completion: nil)
             
         } else {
             let alert = UIAlertController(title: "Please select a mood", message: "How does this entry make you feel?", preferredStyle: .alert)

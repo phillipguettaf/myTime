@@ -10,12 +10,16 @@ import Foundation
 
 class JournalPage {
 
-    private var page:[JournalEntry]
-    private var averageMood:Float
+    var page:[JournalEntry]
+    var averageMood:Float = -1
+    let month: Int
     
-    init() {
+    init(month: Int) {
         page = []
         averageMood = -1
+        self.month = month
+        
+        self.calculateAverageMood()
     }
     
     func calculateAverageMood() {
