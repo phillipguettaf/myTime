@@ -46,6 +46,15 @@ class JournalEntryView: UIViewController, UIPopoverPresentationControllerDelegat
     @IBAction func onSubmit(_ sender: Any) {
         if let actualMood = mood {
             self.content = journalEntryInput.text!
+            let currentDate = Date()
+            let entry = JournalEntry(context: JournalContainer.context)
+            
+            entry.content = content
+            entry.mood = actualMood
+            entry.timeStamp = currentDate as NSDate
+            
+            JournalContainer.saveContext()
+            
         } else {
             let alert = UIAlertController(title: "Please select a mood", message: "How does this entry make you feel?", preferredStyle: .alert)
             let action = UIAlertAction(title: "Return", style: .default)
