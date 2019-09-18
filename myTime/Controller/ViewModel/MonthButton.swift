@@ -125,6 +125,10 @@ class MonthButton: UIView {
             self.backgroundColor = bgColor
         }
     
+    
+    // Formula for determining perceived brightness taken from W3 Consortium
+    // "Techniques for Accessibility Evaluation and Repair Tools" 26/April/2000
+    // (https://www.w3.org/TR/AERT/#color-contrast)
     func isBackgroundBright(r: CGFloat, g: CGFloat, b: CGFloat) -> Bool {
         let red = r * 255
         let blue = b * 255
