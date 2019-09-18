@@ -12,6 +12,7 @@ import UIKit
 class MonthButton: UIView {
 
     var button: UIButton
+    var tableDelegate: TableViewDelegate?
     
     var monthPage: JournalPage?  {
         didSet {
@@ -49,25 +50,31 @@ class MonthButton: UIView {
             self.calculateBackgroundColour()
         }
     }
-    
+
     override init(frame: CGRect) {
         button = UIButton()
         let rect = CGRect(x: 0, y: 0, width: 100, height: 100)
         super.init(frame: rect)
         
         self.addSubview(button)
+        
+       button.addTarget(self, action: #selector(buttonClick), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         button.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         button.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         button.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         self.layer.cornerRadius = 12
-        print(self.frame.height, self.frame.width)
+        
         self.calculateBackgroundColour()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @IBAction func buttonClick(_ sender: UIButton) {
+        tableDelegate!.segue(month: monthPage!)
     }
     
     func calculateBackgroundColour() {

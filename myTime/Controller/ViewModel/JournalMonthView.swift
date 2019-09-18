@@ -9,11 +9,13 @@
 import Foundation
 import UIKit
 
-class JournalMonthView: UIViewController {
+class JournalMonthView: UIViewController, UIPopoverPresentationControllerDelegate, TableViewDelegate {
     
     @IBOutlet weak var months: UICollectionView!
     @IBOutlet weak var yearPicker: UIPickerView!
     
+    var tableViewDelegate: TableViewDelegate?
+    var selectedMonth: JournalPage?
     
     var journal: Journal?
     
@@ -32,6 +34,26 @@ class JournalMonthView: UIViewController {
         self.journal = Journal()
         yearPicker.reloadAllComponents()
         months.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "tableViewPopover" {
+            let tableViewController = segue.destination as! JournalTableView
+            tableViewController.segue(month: selectedMonth!)
+        tableViewController.popoverPresentationController!.delegate = self
+            tableViewController.delegate = self
+        }
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+    // Force popover style
+    return UIModalPresentationStyle.none
+    }
+    
+    func segue(month: JournalPage) {
+        self.selectedMonth = month
+        performSegue(withIdentifier: "tableViewPopover", sender: (Any).self)
+        
     }
 }
 
@@ -83,6 +105,7 @@ extension JournalMonthView: UICollectionViewDataSource {
             let month = Array(journalContents.pages[year]!.keys).sorted(by:<)[indexPath.row]
             let page = journalContents.pages[year]?[month]
             
+            cell.tableDelegate = self
             cell.monthPage = page
             
         } else {
