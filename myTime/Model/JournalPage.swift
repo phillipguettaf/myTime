@@ -9,7 +9,7 @@
 import Foundation
 
 class JournalPage {
-
+    // Contains an array of journal entries, an average mood for the month and a month
     var page:[JournalEntry]
     var averageMood:Float = -1
     let month: Int
