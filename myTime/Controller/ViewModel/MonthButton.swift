@@ -117,6 +117,23 @@ class MonthButton: UIView {
                 green = 0
             }
             let bgColor = UIColor(red: red, green: green, blue: blue, alpha: transparency)
+            if isBackgroundBright(r: red, g: green, b: blue) {
+                button.setTitleColor(.black, for: .normal)
+            } else {
+                button.setTitleColor(.white, for: .normal)
+            }
             self.backgroundColor = bgColor
         }
+    
+    func isBackgroundBright(r: CGFloat, g: CGFloat, b: CGFloat) -> Bool {
+        let red = r * 255
+        let blue = b * 255
+        let green = g * 255
+        let brightnessValue = ((red * 299) + (green * 587) + (blue * 114))/1000
+        if brightnessValue > 125 {
+            return true
+        } else {
+            return false
+        }
+    }
 }
