@@ -11,6 +11,9 @@ import UIKit
 
 class JournalTableView: UITableViewController, TableViewDelegate {
     
+    var thereIsCellTapped = false
+    var selectedRowIndex = -1
+    
     func segue(month: JournalPage) {
         self.month = month
     }
@@ -42,6 +45,36 @@ class JournalTableView: UITableViewController, TableViewDelegate {
         }
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        self.tableView.cellForRow(at: indexPath)?.backgroundColor = .gray
+        self.tableView.cellForRow(at: indexPath)?.textLabel?.text = month!.page[indexPath.row].content
 
+        // avoid paint the cell is the index is outside the bounds
+        if self.selectedRowIndex != -1 {
+            self.tableView.cellForRow(at: IndexPath(row: self.selectedRowIndex, section: 0))?.backgroundColor = .white
+        }
+
+        if selectedRowIndex != indexPath.row {
+            self.thereIsCellTapped = true
+            self.selectedRowIndex = indexPath.row
+        } else {
+            // there is no cell selected anymore
+            self.thereIsCellTapped = false
+            self.selectedRowIndex = -1
+        }
+
+        self.tableView.beginUpdates()
+        self.tableView.endUpdates()
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == selectedRowIndex && thereIsCellTapped {
+            return 144
+        }
+        self.tableView.cellForRow(at: indexPath)?.textLabel?.text = ""
+        return 50
+    }
     
 }

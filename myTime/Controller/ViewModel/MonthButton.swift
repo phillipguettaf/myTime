@@ -53,7 +53,7 @@ class MonthButton: UIView {
 
     override init(frame: CGRect) {
         button = UIButton()
-        let rect = CGRect(x: 0, y: 0, width: 100, height: 100)
+        let rect = CGRect(x: 0, y: 0, width: 75, height: 75)
         super.init(frame: rect)
         
         self.addSubview(button)

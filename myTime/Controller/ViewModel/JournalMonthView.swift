@@ -45,6 +45,12 @@ class JournalMonthView: UIViewController, UIPopoverPresentationControllerDelegat
         }
     }
     
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        months.collectionViewLayout.invalidateLayout()
+    }
+    
     func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
     // Force popover style
     return UIModalPresentationStyle.none
