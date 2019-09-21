@@ -142,13 +142,55 @@
         <!--Profile-->
         <scene sceneID="0xC-dT-Crb">
             <objects>
-                <viewController title="Profile" id="7By-DU-WqW" customClass="ViewController" customModule="myTime" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Profile" id="7By-DU-WqW" customClass="ProfileBarChartView" customModule="myTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Qk-HH-FOG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Profile" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="knF-Dg-B9e">
-                                <rect key="frame" x="128.5" y="269" width="63" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3hW-V4-EyN">
+                                <rect key="frame" x="26" y="306" width="268" height="186"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MvJ-C7-3bJ" customClass="BarChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="0.0" width="268" height="186"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="268" id="JjD-sj-s5Y"/>
+                                            <constraint firstAttribute="height" constant="186" id="YaY-nW-45c"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="268" id="NJY-eo-pOV"/>
+                                    <constraint firstAttribute="height" constant="186" id="Uta-er-E8q"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="zls-Fv-rUV">
+                                <rect key="frame" x="123" y="65" width="75" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="B1q-Jj-e3l"/>
+                                    <constraint firstAttribute="height" constant="63" id="zrp-ZM-Cl3"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="John Smith" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="frH-Hq-idk">
+                                <rect key="frame" x="112" y="136" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="jou-Vz-AfK"/>
+                                    <constraint firstAttribute="height" constant="30" id="lSA-Nw-SXY"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Number of Journal Entries" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZF9-V6-rkq">
+                                <rect key="frame" x="26" y="257" width="193" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="D70-RB-qqN"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="IfK-tk-7bc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="193" id="XCr-yF-1Ay"/>
+                                    <constraint firstAttribute="height" constant="30" id="fAr-nE-vdC"/>
+                                    <constraint firstAttribute="width" constant="193" id="qjF-8M-6j8"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="193" id="zY6-RH-v2f"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -156,17 +198,31 @@
                         </subviews>
                         <color key="backgroundColor" red="0.076101608574390411" green="0.3102957010269165" blue="0.31540995836257935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="knF-Dg-B9e" firstAttribute="centerY" secondItem="1Qk-HH-FOG" secondAttribute="centerY" id="C7C-3N-Rih"/>
-                            <constraint firstItem="knF-Dg-B9e" firstAttribute="centerX" secondItem="1Qk-HH-FOG" secondAttribute="centerX" id="RkR-v0-hHb"/>
+                            <constraint firstItem="AQN-od-iGA" firstAttribute="trailing" secondItem="frH-Hq-idk" secondAttribute="trailing" constant="111" id="6yY-y1-42w"/>
+                            <constraint firstItem="zls-Fv-rUV" firstAttribute="leading" secondItem="AQN-od-iGA" secondAttribute="leading" constant="123" id="803-Za-y4x"/>
+                            <constraint firstItem="frH-Hq-idk" firstAttribute="top" secondItem="zls-Fv-rUV" secondAttribute="bottom" constant="8" id="AgR-ZO-o04"/>
+                            <constraint firstItem="frH-Hq-idk" firstAttribute="leading" secondItem="AQN-od-iGA" secondAttribute="leading" constant="112" id="L6v-ip-tCK"/>
+                            <constraint firstItem="3hW-V4-EyN" firstAttribute="top" secondItem="ZF9-V6-rkq" secondAttribute="bottom" constant="19" id="Lz0-Js-mng"/>
+                            <constraint firstItem="AQN-od-iGA" firstAttribute="trailing" secondItem="3hW-V4-EyN" secondAttribute="trailing" constant="26" id="Pqf-dF-uNG"/>
+                            <constraint firstItem="AQN-od-iGA" firstAttribute="trailing" secondItem="ZF9-V6-rkq" secondAttribute="trailing" constant="101" id="SIL-Jv-zx7"/>
+                            <constraint firstItem="ZF9-V6-rkq" firstAttribute="leading" secondItem="AQN-od-iGA" secondAttribute="leading" constant="26" id="VsT-WA-BCb"/>
+                            <constraint firstItem="zls-Fv-rUV" firstAttribute="top" secondItem="AQN-od-iGA" secondAttribute="top" constant="45" id="eT8-FA-zdy"/>
+                            <constraint firstItem="AQN-od-iGA" firstAttribute="bottom" secondItem="3hW-V4-EyN" secondAttribute="bottom" constant="27" id="fv9-2O-3OC"/>
+                            <constraint firstItem="AQN-od-iGA" firstAttribute="trailing" secondItem="zls-Fv-rUV" secondAttribute="trailing" constant="122" id="gO5-K7-E75"/>
+                            <constraint firstItem="ZF9-V6-rkq" firstAttribute="top" secondItem="frH-Hq-idk" secondAttribute="bottom" constant="91" id="kNC-Xu-3U7"/>
+                            <constraint firstItem="3hW-V4-EyN" firstAttribute="leading" secondItem="AQN-od-iGA" secondAttribute="leading" constant="26" id="zig-Uy-Voq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AQN-od-iGA"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="ProfileIcon" id="Qv9-Tv-gAz"/>
                     <navigationItem key="navigationItem" id="nE1-v4-SDH"/>
+                    <connections>
+                        <outlet property="bar" destination="MvJ-C7-3bJ" id="E3b-iG-2JP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V51-yA-POf" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1350" y="1026"/>
+            <point key="canvasLocation" x="1350" y="1025.7042253521126"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kH0-4W-NyX">

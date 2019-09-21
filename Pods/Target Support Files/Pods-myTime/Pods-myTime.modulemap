@@ -1,0 +1,6 @@
+module Pods_myTime {
+  umbrella header "Pods-myTime-umbrella.h"
+
+  export *
+  module * { export * }
+}
