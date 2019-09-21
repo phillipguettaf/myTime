@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		277987F38184CF8100D7371E /* libPods-myTimeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B8DDFCD815E51BED47F29C9 /* libPods-myTimeTests.a */; };
 		9393827E2335C9ED00EECE5D /* ProfileBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9393827D2335C9ED00EECE5D /* ProfileBarChart.swift */; };
+		93938299233653BA00EECE5D /* TimerControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93938298233653BA00EECE5D /* TimerControllerView.swift */; };
 		B7616E96F85042C57C2B1BF5 /* libPods-myTime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B236DFC39D8026CFAA1136AC /* libPods-myTime.a */; };
 		D77B960C4699D71B32A8AADA /* libPods-myTimeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 783CA3D513D0DC10C2824814 /* libPods-myTimeUITests.a */; };
 		FA0944D82330E412001637A1 /* JournalEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0944D72330E412001637A1 /* JournalEntryView.swift */; };
@@ -64,6 +65,7 @@
 		939382862335CB9500EECE5D /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9393828E2336361D00EECE5D /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		939382922336363400EECE5D /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93938298233653BA00EECE5D /* TimerControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerControllerView.swift; sourceTree = "<group>"; };
 		B236DFC39D8026CFAA1136AC /* libPods-myTime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myTime.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBE3F4257BB580C0E7DFA8B /* Pods-myTimeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myTimeTests.debug.xcconfig"; path = "Target Support Files/Pods-myTimeTests/Pods-myTimeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA0944D72330E412001637A1 /* JournalEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JournalEntryView.swift; path = ../../JournalEntryView.swift; sourceTree = "<group>"; };
@@ -165,6 +167,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		93938294233651FF00EECE5D /* Meditation */ = {
+			isa = PBXGroup;
+			children = (
+				93938298233653BA00EECE5D /* TimerControllerView.swift */,
+			);
+			path = Meditation;
+			sourceTree = "<group>";
+		};
 		FA0944E523313EA9001637A1 /* Journal */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +261,7 @@
 		FA238167231E454F0060BC1F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				93938294233651FF00EECE5D /* Meditation */,
 				9393827B2335C93100EECE5D /* Profile */,
 				FA238136231E44F30060BC1F /* ViewController.swift */,
 				FA2F5B7023322DA1008A9E94 /* Journal */,
@@ -501,6 +512,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93938299233653BA00EECE5D /* TimerControllerView.swift in Sources */,
 				FA238137231E44F30060BC1F /* ViewController.swift in Sources */,
 				FA2F5B6B233152D8008A9E94 /* JournalMonthView.swift in Sources */,
 				FA3B917423323171005AEB53 /* TableCell.swift in Sources */,

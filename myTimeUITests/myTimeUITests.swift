@@ -1,13 +1,3 @@
-
-//let app = XCUIApplication()
-//app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textField).element(boundBy: 1).tap()
-//
-//let tabBarsQuery = app.tabBars
-//tabBarsQuery.buttons["Relax"].tap()
-//tabBarsQuery.buttons["Profile"].tap()
-//app.otherElements[" 4: 3.00"].tap()
-//app.otherElements[" 5: 8.00"].tap()
-//app.otherElements[" 6: 9.00"].tap()
 //
 //  myTimeUITests.swift
 //  myTimeUITests

@@ -114,23 +114,11 @@
         <!--Relax-->
         <scene sceneID="Ksg-d0-XiN">
             <objects>
-                <viewController id="mZe-Kg-qQS" customClass="ViewController" customModule="myTime" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mZe-Kg-qQS" customClass="TimerControllerView" customModule="myTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kww-D8-HNA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Meditation" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GcC-Mg-AlH">
-                                <rect key="frame" x="115" y="269" width="90" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
                         <color key="backgroundColor" red="0.076101608574390411" green="0.3102957010269165" blue="0.31540995836257935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="GcC-Mg-AlH" firstAttribute="centerX" secondItem="Kww-D8-HNA" secondAttribute="centerX" id="c26-ab-zQ4"/>
-                            <constraint firstItem="GcC-Mg-AlH" firstAttribute="centerY" secondItem="Kww-D8-HNA" secondAttribute="centerY" id="xgY-Mo-Ise"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="40S-XD-lfU"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Relax" image="MeditationIcon" id="Q5X-Dv-W3W"/>
