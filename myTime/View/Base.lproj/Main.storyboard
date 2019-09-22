@@ -164,11 +164,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb5-5F-EpH" customClass="ProfileScrollView" customModule="myTime" customModuleProvider="target">
-                                <rect key="frame" x="40" y="168" width="240" height="331"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb5-5F-EpH" customClass="ProfileScrollView" customModule="myTime" customModuleProvider="target">
+                                <rect key="frame" x="20" y="168" width="280" height="331"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Journal Frequency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96p-Xe-vLS">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="iUV-YJ-fkG"/>
                                         </constraints>
@@ -176,16 +176,16 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MvJ-C7-3bJ" customClass="BarChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="20" width="240" height="200"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MvJ-C7-3bJ" customClass="BarChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="20" width="280" height="200"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="240" id="Rjv-8v-QvT"/>
-                                            <constraint firstAttribute="height" constant="200" id="gCu-ld-0by"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="Rjv-8v-QvT"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="gCu-ld-0by"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Mood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bq-hx-vRr">
-                                        <rect key="frame" x="0.0" y="230" width="240" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Average Mood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bq-hx-vRr">
+                                        <rect key="frame" x="0.0" y="230" width="280" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="LmY-rF-HxL"/>
                                         </constraints>
@@ -193,12 +193,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vtl-P8-ctr" customClass="BarChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="250" width="240" height="200"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vtl-P8-ctr" customClass="BarChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="250" width="280" height="200"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="pcu-va-I2j"/>
-                                            <constraint firstAttribute="width" constant="240" id="uKg-Mb-pSO"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="pcu-va-I2j"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="uKg-Mb-pSO"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -212,9 +212,10 @@
                                     <constraint firstAttribute="bottom" secondItem="Vtl-P8-ctr" secondAttribute="bottom" id="WSX-5z-0UI"/>
                                     <constraint firstItem="96p-Xe-vLS" firstAttribute="leading" secondItem="Xb5-5F-EpH" secondAttribute="leading" id="XeG-Qj-s2R"/>
                                     <constraint firstItem="8bq-hx-vRr" firstAttribute="leading" secondItem="Xb5-5F-EpH" secondAttribute="leading" id="d4r-Od-NgX"/>
+                                    <constraint firstItem="MvJ-C7-3bJ" firstAttribute="centerX" secondItem="Xb5-5F-EpH" secondAttribute="centerX" id="ifr-50-pYB"/>
                                     <constraint firstAttribute="trailing" secondItem="96p-Xe-vLS" secondAttribute="trailing" id="lnx-aO-3em"/>
-                                    <constraint firstAttribute="width" constant="240" id="lqM-KK-XJl"/>
                                     <constraint firstItem="Vtl-P8-ctr" firstAttribute="leading" secondItem="Xb5-5F-EpH" secondAttribute="leading" id="nSK-6l-neA"/>
+                                    <constraint firstItem="Vtl-P8-ctr" firstAttribute="centerX" secondItem="Xb5-5F-EpH" secondAttribute="centerX" id="nwa-eb-U8f"/>
                                     <constraint firstItem="8bq-hx-vRr" firstAttribute="top" secondItem="MvJ-C7-3bJ" secondAttribute="bottom" constant="10" id="obW-jK-DHe"/>
                                     <constraint firstItem="MvJ-C7-3bJ" firstAttribute="leading" secondItem="Xb5-5F-EpH" secondAttribute="leading" id="wRV-iQ-vAi"/>
                                 </constraints>
@@ -231,8 +232,10 @@
                             <constraint firstItem="Xb5-5F-EpH" firstAttribute="top" secondItem="uPa-5v-DjC" secondAttribute="bottom" constant="20" id="Wdb-jJ-jdb"/>
                             <constraint firstItem="zls-Fv-rUV" firstAttribute="top" secondItem="AQN-od-iGA" secondAttribute="top" constant="30" id="Wvq-Ja-7LY"/>
                             <constraint firstItem="zls-Fv-rUV" firstAttribute="centerX" secondItem="1Qk-HH-FOG" secondAttribute="centerX" id="YGp-9L-R0w"/>
+                            <constraint firstItem="Xb5-5F-EpH" firstAttribute="leading" secondItem="AQN-od-iGA" secondAttribute="leading" constant="20" id="aLN-im-xLC"/>
                             <constraint firstItem="Xb5-5F-EpH" firstAttribute="centerX" secondItem="1Qk-HH-FOG" secondAttribute="centerX" id="le6-HN-hCe"/>
                             <constraint firstItem="uPa-5v-DjC" firstAttribute="top" secondItem="zls-Fv-rUV" secondAttribute="bottom" constant="15" id="nBj-7H-3NU"/>
+                            <constraint firstItem="AQN-od-iGA" firstAttribute="trailing" secondItem="Xb5-5F-EpH" secondAttribute="trailing" constant="20" id="nZm-bX-063"/>
                             <constraint firstItem="AQN-od-iGA" firstAttribute="bottom" secondItem="Xb5-5F-EpH" secondAttribute="bottom" constant="20" id="yYR-uB-Qh5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AQN-od-iGA"/>
