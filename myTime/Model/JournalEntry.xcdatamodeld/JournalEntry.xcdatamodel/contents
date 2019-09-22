@@ -6,7 +6,12 @@
         <attribute name="mood" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
+    <entity name="Profile" representedClassName="Profile" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="passcode" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="JournalEntry" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Profile" positionX="-63" positionY="9" width="128" height="75"/>
     </elements>
 </model>

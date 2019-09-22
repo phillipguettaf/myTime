@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		277987F38184CF8100D7371E /* libPods-myTimeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B8DDFCD815E51BED47F29C9 /* libPods-myTimeTests.a */; };
-		9393827E2335C9ED00EECE5D /* ProfileBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9393827D2335C9ED00EECE5D /* ProfileBarChart.swift */; };
+		9393827E2335C9ED00EECE5D /* ProfileMasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9393827D2335C9ED00EECE5D /* ProfileMasterView.swift */; };
 		B7616E96F85042C57C2B1BF5 /* libPods-myTime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B236DFC39D8026CFAA1136AC /* libPods-myTime.a */; };
 		D77B960C4699D71B32A8AADA /* libPods-myTimeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 783CA3D513D0DC10C2824814 /* libPods-myTimeUITests.a */; };
 		FA0944D82330E412001637A1 /* JournalEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0944D72330E412001637A1 /* JournalEntryView.swift */; };
@@ -17,6 +17,8 @@
 		FA0944E023312E1B001637A1 /* MoodOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0944DF23312E1B001637A1 /* MoodOptionView.swift */; };
 		FA0944E323313CCB001637A1 /* JournalEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0944E123313CCA001637A1 /* JournalEntry+CoreDataClass.swift */; };
 		FA0944E423313CCB001637A1 /* JournalEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0944E223313CCA001637A1 /* JournalEntry+CoreDataProperties.swift */; };
+		FA09F4A4233736F900EC6848 /* ProfileStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09F4A3233736F900EC6848 /* ProfileStackView.swift */; };
+		FA09F4A62337377200EC6848 /* ProfileScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09F4A52337377200EC6848 /* ProfileScrollView.swift */; };
 		FA238135231E44F30060BC1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA238134231E44F30060BC1F /* AppDelegate.swift */; };
 		FA238137231E44F30060BC1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA238136231E44F30060BC1F /* ViewController.swift */; };
 		FA23813A231E44F30060BC1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA238138231E44F30060BC1F /* Main.storyboard */; };
@@ -59,7 +61,7 @@
 		782BD947C6A5A5FB5C11C2BC /* Pods-myTimeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myTimeUITests.debug.xcconfig"; path = "Target Support Files/Pods-myTimeUITests/Pods-myTimeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		783CA3D513D0DC10C2824814 /* libPods-myTimeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myTimeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8492F7A12D0DAEC2BBC2C933 /* Pods-myTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myTime.release.xcconfig"; path = "Target Support Files/Pods-myTime/Pods-myTime.release.xcconfig"; sourceTree = "<group>"; };
-		9393827D2335C9ED00EECE5D /* ProfileBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBarChart.swift; sourceTree = "<group>"; };
+		9393827D2335C9ED00EECE5D /* ProfileMasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMasterView.swift; sourceTree = "<group>"; };
 		939382802335CAB800EECE5D /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		939382862335CB9500EECE5D /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9393828E2336361D00EECE5D /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +74,8 @@
 		FA0944DF23312E1B001637A1 /* MoodOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MoodOptionView.swift; path = ../../MoodOptionView.swift; sourceTree = "<group>"; };
 		FA0944E123313CCA001637A1 /* JournalEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "JournalEntry+CoreDataClass.swift"; path = "../JournalEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FA0944E223313CCA001637A1 /* JournalEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "JournalEntry+CoreDataProperties.swift"; path = "../JournalEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FA09F4A3233736F900EC6848 /* ProfileStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStackView.swift; sourceTree = "<group>"; };
+		FA09F4A52337377200EC6848 /* ProfileScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScrollView.swift; sourceTree = "<group>"; };
 		FA238131231E44F30060BC1F /* myTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA238134231E44F30060BC1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA238136231E44F30060BC1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 		9393827B2335C93100EECE5D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				9393827D2335C9ED00EECE5D /* ProfileMasterView.swift */,
 				9393827C2335C94300EECE5D /* ProfileBarChart */,
 			);
 			path = Profile;
@@ -147,7 +152,8 @@
 		9393827C2335C94300EECE5D /* ProfileBarChart */ = {
 			isa = PBXGroup;
 			children = (
-				9393827D2335C9ED00EECE5D /* ProfileBarChart.swift */,
+				FA09F4A3233736F900EC6848 /* ProfileStackView.swift */,
+				FA09F4A52337377200EC6848 /* ProfileScrollView.swift */,
 			);
 			path = ProfileBarChart;
 			sourceTree = "<group>";
@@ -251,8 +257,8 @@
 		FA238167231E454F0060BC1F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				9393827B2335C93100EECE5D /* Profile */,
 				FA238136231E44F30060BC1F /* ViewController.swift */,
+				9393827B2335C93100EECE5D /* Profile */,
 				FA2F5B7023322DA1008A9E94 /* Journal */,
 			);
 			name = ViewModel;
@@ -513,10 +519,12 @@
 				FA2F5B6D2331C0E6008A9E94 /* MonthCell.swift in Sources */,
 				FA2F5B6923314195008A9E94 /* Journal.swift in Sources */,
 				FA238135231E44F30060BC1F /* AppDelegate.swift in Sources */,
-				9393827E2335C9ED00EECE5D /* ProfileBarChart.swift in Sources */,
+				9393827E2335C9ED00EECE5D /* ProfileMasterView.swift in Sources */,
+				FA09F4A4233736F900EC6848 /* ProfileStackView.swift in Sources */,
 				FA0944DA2330EF70001637A1 /* JournalContainer.swift in Sources */,
 				FA2F5B6F2331D4D4008A9E94 /* MonthButton.swift in Sources */,
 				FA2F5B7423322E38008A9E94 /* JournalTableView.swift in Sources */,
+				FA09F4A62337377200EC6848 /* ProfileScrollView.swift in Sources */,
 				FA3B917623325805005AEB53 /* TableViewDelegate.swift in Sources */,
 				FA0944E323313CCB001637A1 /* JournalEntry+CoreDataClass.swift in Sources */,
 			);
