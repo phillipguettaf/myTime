@@ -17,7 +17,6 @@
 		FA0944E023312E1B001637A1 /* MoodOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0944DF23312E1B001637A1 /* MoodOptionView.swift */; };
 		FA0944E323313CCB001637A1 /* JournalEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0944E123313CCA001637A1 /* JournalEntry+CoreDataClass.swift */; };
 		FA0944E423313CCB001637A1 /* JournalEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0944E223313CCA001637A1 /* JournalEntry+CoreDataProperties.swift */; };
-		FA09F4A4233736F900EC6848 /* ProfileStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09F4A3233736F900EC6848 /* ProfileStackView.swift */; };
 		FA09F4A62337377200EC6848 /* ProfileScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09F4A52337377200EC6848 /* ProfileScrollView.swift */; };
 		FA238135231E44F30060BC1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA238134231E44F30060BC1F /* AppDelegate.swift */; };
 		FA238137231E44F30060BC1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA238136231E44F30060BC1F /* ViewController.swift */; };
@@ -74,7 +73,6 @@
 		FA0944DF23312E1B001637A1 /* MoodOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MoodOptionView.swift; path = ../../MoodOptionView.swift; sourceTree = "<group>"; };
 		FA0944E123313CCA001637A1 /* JournalEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "JournalEntry+CoreDataClass.swift"; path = "../JournalEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FA0944E223313CCA001637A1 /* JournalEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "JournalEntry+CoreDataProperties.swift"; path = "../JournalEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		FA09F4A3233736F900EC6848 /* ProfileStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStackView.swift; sourceTree = "<group>"; };
 		FA09F4A52337377200EC6848 /* ProfileScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScrollView.swift; sourceTree = "<group>"; };
 		FA238131231E44F30060BC1F /* myTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA238134231E44F30060BC1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -152,7 +150,6 @@
 		9393827C2335C94300EECE5D /* ProfileBarChart */ = {
 			isa = PBXGroup;
 			children = (
-				FA09F4A3233736F900EC6848 /* ProfileStackView.swift */,
 				FA09F4A52337377200EC6848 /* ProfileScrollView.swift */,
 			);
 			path = ProfileBarChart;
@@ -520,7 +517,6 @@
 				FA2F5B6923314195008A9E94 /* Journal.swift in Sources */,
 				FA238135231E44F30060BC1F /* AppDelegate.swift in Sources */,
 				9393827E2335C9ED00EECE5D /* ProfileMasterView.swift in Sources */,
-				FA09F4A4233736F900EC6848 /* ProfileStackView.swift in Sources */,
 				FA0944DA2330EF70001637A1 /* JournalContainer.swift in Sources */,
 				FA2F5B6F2331D4D4008A9E94 /* MonthButton.swift in Sources */,
 				FA2F5B7423322E38008A9E94 /* JournalTableView.swift in Sources */,

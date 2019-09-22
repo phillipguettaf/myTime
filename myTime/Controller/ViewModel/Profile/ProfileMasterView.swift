@@ -21,7 +21,6 @@ class ProfileBarChartView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        chartContainer.refresh()
     }
 }
