@@ -82,7 +82,7 @@
                                 </constraints>
                             </pickerView>
                         </subviews>
-                        <color key="backgroundColor" red="0.076101608574390411" green="0.3102957010269165" blue="0.31540995836257935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.12780109049999999" green="0.31013342739999999" blue="0.3162297308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Iw2-Eb-IT2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="E1z-xX-Hxp"/>
                             <constraint firstItem="Iw2-Eb-IT2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EIo-IO-Yw9"/>
@@ -109,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1369" y="-439"/>
+            <point key="canvasLocation" x="1350" y="-486"/>
         </scene>
         <!--Relax-->
         <scene sceneID="Ksg-d0-XiN">
@@ -193,7 +193,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vtl-P8-ctr" customClass="BarChartView" customModule="Charts">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vtl-P8-ctr" customClass="LineChartView" customModule="Charts">
                                         <rect key="frame" x="0.0" y="250" width="280" height="200"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>

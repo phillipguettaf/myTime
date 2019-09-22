@@ -13,7 +13,7 @@ import Charts
 class ProfileScrollView: UIScrollView {
     
     @IBOutlet weak var frequency: BarChartView!
-    @IBOutlet weak var aveMood: BarChartView?
+    @IBOutlet weak var aveMood: LineChartView!
     
         // Create some Data
     let happinessLevel = [2.0, 4.0, 6.0, 3.0, 8.0, 9.0, 2.0, 1.0, 5.0, 6.0, 7.0, 4.0]
@@ -41,14 +41,17 @@ class ProfileScrollView: UIScrollView {
         
         // Sets the data inside chart
         let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Month")
+        let moodDataSet = LineChartDataSet(entries: dataEntries, label: "Month")
         
         // Combines the data into a variable chartData to be called inside the viewDidLoad
         let chartData = BarChartData(dataSet: chartDataSet)
+        let moodData = LineChartData(dataSet: moodDataSet)
         
         
         chartDataSet.valueFont = UIFont(name: "Verdana", size: 12.0)!
+        moodDataSet.valueFont = UIFont(name: "Verdana", size: 12.0)!
         
-        
+        aveMood.data = moodData
         frequency.data = chartData
     }
     
