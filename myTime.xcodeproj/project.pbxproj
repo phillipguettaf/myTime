@@ -11,12 +11,6 @@
 		9393827E2335C9ED00EECE5D /* ProfileMasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9393827D2335C9ED00EECE5D /* ProfileMasterView.swift */; };
 		B7616E96F85042C57C2B1BF5 /* libPods-myTime.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B236DFC39D8026CFAA1136AC /* libPods-myTime.a */; };
 		D77B960C4699D71B32A8AADA /* libPods-myTimeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 783CA3D513D0DC10C2824814 /* libPods-myTimeUITests.a */; };
-		FA0944D82330E412001637A1 /* JournalEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0944D72330E412001637A1 /* JournalEntryView.swift */; };
-		FA0944DA2330EF70001637A1 /* JournalContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0944D92330EF70001637A1 /* JournalContainer.swift */; };
-		FA0944DE23312CCF001637A1 /* MoodSelectDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0944DD23312CCF001637A1 /* MoodSelectDelegate.swift */; };
-		FA0944E023312E1B001637A1 /* MoodOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0944DF23312E1B001637A1 /* MoodOptionView.swift */; };
-		FA0944E323313CCB001637A1 /* JournalEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0944E123313CCA001637A1 /* JournalEntry+CoreDataClass.swift */; };
-		FA0944E423313CCB001637A1 /* JournalEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0944E223313CCA001637A1 /* JournalEntry+CoreDataProperties.swift */; };
 		FA09F4A62337377200EC6848 /* ProfileScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA09F4A52337377200EC6848 /* ProfileScrollView.swift */; };
 		FA238135231E44F30060BC1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA238134231E44F30060BC1F /* AppDelegate.swift */; };
 		FA238137231E44F30060BC1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA238136231E44F30060BC1F /* ViewController.swift */; };
@@ -25,16 +19,22 @@
 		FA23814D231E44FD0060BC1F /* myTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23814C231E44FD0060BC1F /* myTimeTests.swift */; };
 		FA238158231E44FD0060BC1F /* myTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA238157231E44FD0060BC1F /* myTimeUITests.swift */; };
 		FA2F5B6923314195008A9E94 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F5B6823314195008A9E94 /* Journal.swift */; };
-		FA2F5B6B233152D8008A9E94 /* JournalMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F5B6A233152D8008A9E94 /* JournalMonthView.swift */; };
-		FA2F5B6D2331C0E6008A9E94 /* MonthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F5B6C2331C0E6008A9E94 /* MonthCell.swift */; };
-		FA2F5B6F2331D4D4008A9E94 /* MonthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F5B6E2331D4D4008A9E94 /* MonthButton.swift */; };
 		FA2F5B7423322E38008A9E94 /* JournalTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F5B7323322E38008A9E94 /* JournalTableView.swift */; };
 		FA37729923376C94007612F5 /* TimerControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37729723376C93007612F5 /* TimerControllerView.swift */; };
 		FA3772A723385796007612F5 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3772A623385796007612F5 /* GradientView.swift */; };
 		FA3B917423323171005AEB53 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B917323323171005AEB53 /* TableCell.swift */; };
 		FA3B917623325805005AEB53 /* TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B917523325805005AEB53 /* TableViewDelegate.swift */; };
-		FA3BADA5232155EE00FD5D2F /* JournalPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BADA4232155EE00FD5D2F /* JournalPage.swift */; };
-		FA8FBB5A23273B3E008954AC /* JournalEntry.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA8FBB5823273B3D008954AC /* JournalEntry.xcdatamodeld */; };
+		FA6C64502338EADC004E195C /* MoodOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C644D2338EADC004E195C /* MoodOptionView.swift */; };
+		FA6C64512338EADC004E195C /* MoodSelectDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C644E2338EADC004E195C /* MoodSelectDelegate.swift */; };
+		FA6C64522338EADC004E195C /* JournalEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C644F2338EADC004E195C /* JournalEntryView.swift */; };
+		FA6C64562338EAF2004E195C /* JournalMonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C64532338EAF2004E195C /* JournalMonthView.swift */; };
+		FA6C64572338EAF2004E195C /* MonthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C64542338EAF2004E195C /* MonthCell.swift */; };
+		FA6C64582338EAF2004E195C /* MonthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C64552338EAF2004E195C /* MonthButton.swift */; };
+		FA6C645F2338EB09004E195C /* JournalEntry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C64592338EB09004E195C /* JournalEntry+CoreDataClass.swift */; };
+		FA6C64602338EB09004E195C /* JournalEntry.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA6C645A2338EB09004E195C /* JournalEntry.xcdatamodeld */; };
+		FA6C64612338EB09004E195C /* JournalContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C645C2338EB09004E195C /* JournalContainer.swift */; };
+		FA6C64622338EB09004E195C /* JournalEntry+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C645D2338EB09004E195C /* JournalEntry+CoreDataProperties.swift */; };
+		FA6C64632338EB09004E195C /* JournalPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C645E2338EB09004E195C /* JournalPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,12 +69,6 @@
 		939382922336363400EECE5D /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B236DFC39D8026CFAA1136AC /* libPods-myTime.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myTime.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBE3F4257BB580C0E7DFA8B /* Pods-myTimeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myTimeTests.debug.xcconfig"; path = "Target Support Files/Pods-myTimeTests/Pods-myTimeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		FA0944D72330E412001637A1 /* JournalEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JournalEntryView.swift; path = ../../JournalEntryView.swift; sourceTree = "<group>"; };
-		FA0944D92330EF70001637A1 /* JournalContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JournalContainer.swift; path = ../JournalContainer.swift; sourceTree = "<group>"; };
-		FA0944DD23312CCF001637A1 /* MoodSelectDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MoodSelectDelegate.swift; path = ../../MoodSelectDelegate.swift; sourceTree = "<group>"; };
-		FA0944DF23312E1B001637A1 /* MoodOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MoodOptionView.swift; path = ../../MoodOptionView.swift; sourceTree = "<group>"; };
-		FA0944E123313CCA001637A1 /* JournalEntry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "JournalEntry+CoreDataClass.swift"; path = "../JournalEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
-		FA0944E223313CCA001637A1 /* JournalEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "JournalEntry+CoreDataProperties.swift"; path = "../JournalEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FA09F4A52337377200EC6848 /* ProfileScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileScrollView.swift; path = ProfileBarChart/ProfileScrollView.swift; sourceTree = "<group>"; };
 		FA238131231E44F30060BC1F /* myTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA238134231E44F30060BC1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,16 +83,22 @@
 		FA238157231E44FD0060BC1F /* myTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTimeUITests.swift; sourceTree = "<group>"; };
 		FA238159231E44FD0060BC1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA2F5B6823314195008A9E94 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
-		FA2F5B6A233152D8008A9E94 /* JournalMonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JournalMonthView.swift; path = ../../JournalMonthView.swift; sourceTree = "<group>"; };
-		FA2F5B6C2331C0E6008A9E94 /* MonthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MonthCell.swift; path = ../../MonthCell.swift; sourceTree = "<group>"; };
-		FA2F5B6E2331D4D4008A9E94 /* MonthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MonthButton.swift; path = ../../MonthButton.swift; sourceTree = "<group>"; };
 		FA2F5B7323322E38008A9E94 /* JournalTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTableView.swift; sourceTree = "<group>"; };
 		FA37729723376C93007612F5 /* TimerControllerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerControllerView.swift; sourceTree = "<group>"; };
 		FA3772A623385796007612F5 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		FA3B917323323171005AEB53 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		FA3B917523325805005AEB53 /* TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDelegate.swift; sourceTree = "<group>"; };
-		FA3BADA4232155EE00FD5D2F /* JournalPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JournalPage.swift; path = ../JournalPage.swift; sourceTree = "<group>"; };
-		FA8FBB5923273B3E008954AC /* JournalEntry.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JournalEntry.xcdatamodel; sourceTree = "<group>"; };
+		FA6C644D2338EADC004E195C /* MoodOptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodOptionView.swift; sourceTree = "<group>"; };
+		FA6C644E2338EADC004E195C /* MoodSelectDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodSelectDelegate.swift; sourceTree = "<group>"; };
+		FA6C644F2338EADC004E195C /* JournalEntryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalEntryView.swift; sourceTree = "<group>"; };
+		FA6C64532338EAF2004E195C /* JournalMonthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalMonthView.swift; sourceTree = "<group>"; };
+		FA6C64542338EAF2004E195C /* MonthCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthCell.swift; sourceTree = "<group>"; };
+		FA6C64552338EAF2004E195C /* MonthButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthButton.swift; sourceTree = "<group>"; };
+		FA6C64592338EB09004E195C /* JournalEntry+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JournalEntry+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FA6C645B2338EB09004E195C /* JournalEntry.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JournalEntry.xcdatamodel; sourceTree = "<group>"; };
+		FA6C645C2338EB09004E195C /* JournalContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalContainer.swift; sourceTree = "<group>"; };
+		FA6C645D2338EB09004E195C /* JournalEntry+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JournalEntry+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FA6C645E2338EB09004E195C /* JournalPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,12 +167,12 @@
 		FA0944E523313EA9001637A1 /* Journal */ = {
 			isa = PBXGroup;
 			children = (
-				FA0944E123313CCA001637A1 /* JournalEntry+CoreDataClass.swift */,
-				FA0944E223313CCA001637A1 /* JournalEntry+CoreDataProperties.swift */,
-				FA3BADA4232155EE00FD5D2F /* JournalPage.swift */,
+				FA6C645C2338EB09004E195C /* JournalContainer.swift */,
+				FA6C645A2338EB09004E195C /* JournalEntry.xcdatamodeld */,
+				FA6C64592338EB09004E195C /* JournalEntry+CoreDataClass.swift */,
+				FA6C645D2338EB09004E195C /* JournalEntry+CoreDataProperties.swift */,
+				FA6C645E2338EB09004E195C /* JournalPage.swift */,
 				FA2F5B6823314195008A9E94 /* Journal.swift */,
-				FA8FBB5823273B3D008954AC /* JournalEntry.xcdatamodeld */,
-				FA0944D92330EF70001637A1 /* JournalContainer.swift */,
 			);
 			path = Journal;
 			sourceTree = "<group>";
@@ -273,9 +273,9 @@
 		FA2F5B7123322DB1008A9E94 /* JournalEntry */ = {
 			isa = PBXGroup;
 			children = (
-				FA0944D72330E412001637A1 /* JournalEntryView.swift */,
-				FA0944DD23312CCF001637A1 /* MoodSelectDelegate.swift */,
-				FA0944DF23312E1B001637A1 /* MoodOptionView.swift */,
+				FA6C644F2338EADC004E195C /* JournalEntryView.swift */,
+				FA6C644D2338EADC004E195C /* MoodOptionView.swift */,
+				FA6C644E2338EADC004E195C /* MoodSelectDelegate.swift */,
 			);
 			path = JournalEntry;
 			sourceTree = "<group>";
@@ -283,10 +283,10 @@
 		FA2F5B7223322DC8008A9E94 /* JournalMonth */ = {
 			isa = PBXGroup;
 			children = (
-				FA2F5B6A233152D8008A9E94 /* JournalMonthView.swift */,
-				FA2F5B6C2331C0E6008A9E94 /* MonthCell.swift */,
+				FA6C64552338EAF2004E195C /* MonthButton.swift */,
+				FA6C64532338EAF2004E195C /* JournalMonthView.swift */,
+				FA6C64542338EAF2004E195C /* MonthCell.swift */,
 				FA3B917523325805005AEB53 /* TableViewDelegate.swift */,
-				FA2F5B6E2331D4D4008A9E94 /* MonthButton.swift */,
 			);
 			path = JournalMonth;
 			sourceTree = "<group>";
@@ -512,25 +512,25 @@
 			files = (
 				FA37729923376C94007612F5 /* TimerControllerView.swift in Sources */,
 				FA238137231E44F30060BC1F /* ViewController.swift in Sources */,
+				FA6C645F2338EB09004E195C /* JournalEntry+CoreDataClass.swift in Sources */,
+				FA6C64512338EADC004E195C /* MoodSelectDelegate.swift in Sources */,
 				FA3772A723385796007612F5 /* GradientView.swift in Sources */,
-				FA2F5B6B233152D8008A9E94 /* JournalMonthView.swift in Sources */,
+				FA6C64602338EB09004E195C /* JournalEntry.xcdatamodeld in Sources */,
+				FA6C64572338EAF2004E195C /* MonthCell.swift in Sources */,
 				FA3B917423323171005AEB53 /* TableCell.swift in Sources */,
-				FA3BADA5232155EE00FD5D2F /* JournalPage.swift in Sources */,
-				FA0944E023312E1B001637A1 /* MoodOptionView.swift in Sources */,
-				FA8FBB5A23273B3E008954AC /* JournalEntry.xcdatamodeld in Sources */,
-				FA0944E423313CCB001637A1 /* JournalEntry+CoreDataProperties.swift in Sources */,
-				FA0944D82330E412001637A1 /* JournalEntryView.swift in Sources */,
-				FA0944DE23312CCF001637A1 /* MoodSelectDelegate.swift in Sources */,
-				FA2F5B6D2331C0E6008A9E94 /* MonthCell.swift in Sources */,
+				FA6C64632338EB09004E195C /* JournalPage.swift in Sources */,
+				FA6C64522338EADC004E195C /* JournalEntryView.swift in Sources */,
+				FA6C64502338EADC004E195C /* MoodOptionView.swift in Sources */,
 				FA2F5B6923314195008A9E94 /* Journal.swift in Sources */,
+				FA6C64622338EB09004E195C /* JournalEntry+CoreDataProperties.swift in Sources */,
+				FA6C64582338EAF2004E195C /* MonthButton.swift in Sources */,
 				FA238135231E44F30060BC1F /* AppDelegate.swift in Sources */,
 				9393827E2335C9ED00EECE5D /* ProfileMasterView.swift in Sources */,
-				FA0944DA2330EF70001637A1 /* JournalContainer.swift in Sources */,
-				FA2F5B6F2331D4D4008A9E94 /* MonthButton.swift in Sources */,
 				FA2F5B7423322E38008A9E94 /* JournalTableView.swift in Sources */,
 				FA09F4A62337377200EC6848 /* ProfileScrollView.swift in Sources */,
 				FA3B917623325805005AEB53 /* TableViewDelegate.swift in Sources */,
-				FA0944E323313CCB001637A1 /* JournalEntry+CoreDataClass.swift in Sources */,
+				FA6C64562338EAF2004E195C /* JournalMonthView.swift in Sources */,
+				FA6C64612338EB09004E195C /* JournalContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -861,14 +861,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		FA8FBB5823273B3D008954AC /* JournalEntry.xcdatamodeld */ = {
+		FA6C645A2338EB09004E195C /* JournalEntry.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				FA8FBB5923273B3E008954AC /* JournalEntry.xcdatamodel */,
+				FA6C645B2338EB09004E195C /* JournalEntry.xcdatamodel */,
 			);
-			currentVersion = FA8FBB5923273B3E008954AC /* JournalEntry.xcdatamodel */;
-			name = JournalEntry.xcdatamodeld;
-			path = ../JournalEntry.xcdatamodeld;
+			currentVersion = FA6C645B2338EB09004E195C /* JournalEntry.xcdatamodel */;
+			path = JournalEntry.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
