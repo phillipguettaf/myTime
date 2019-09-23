@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		277987F38184CF8100D7371E /* libPods-myTimeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B8DDFCD815E51BED47F29C9 /* libPods-myTimeTests.a */; };
+		931A56DA233903C600A50425 /* AllAround.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931A56D9233903C600A50425 /* AllAround.swift */; };
 		9393827E2335C9ED00EECE5D /* ProfileMasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9393827D2335C9ED00EECE5D /* ProfileMasterView.swift */; };
 		93C2D6332338EE4E004BF123 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C2D6322338EE4E004BF123 /* ProfileTests.swift */; };
 		93C2D6352338F055004BF123 /* MeditationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C2D6342338F055004BF123 /* MeditationTests.swift */; };
@@ -65,6 +66,7 @@
 		782BD947C6A5A5FB5C11C2BC /* Pods-myTimeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myTimeUITests.debug.xcconfig"; path = "Target Support Files/Pods-myTimeUITests/Pods-myTimeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		783CA3D513D0DC10C2824814 /* libPods-myTimeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myTimeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8492F7A12D0DAEC2BBC2C933 /* Pods-myTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myTime.release.xcconfig"; path = "Target Support Files/Pods-myTime/Pods-myTime.release.xcconfig"; sourceTree = "<group>"; };
+		931A56D9233903C600A50425 /* AllAround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAround.swift; sourceTree = "<group>"; };
 		9393827D2335C9ED00EECE5D /* ProfileMasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMasterView.swift; sourceTree = "<group>"; };
 		939382802335CAB800EECE5D /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		939382862335CB9500EECE5D /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,6 +238,7 @@
 				93C2D6322338EE4E004BF123 /* ProfileTests.swift */,
 				93C2D6342338F055004BF123 /* MeditationTests.swift */,
 				FA630FDF2338F2960021883D /* JournalEntryTest.swift */,
+				931A56D9233903C600A50425 /* AllAround.swift */,
 			);
 			path = myTimeUITests;
 			sourceTree = "<group>";
@@ -556,6 +559,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA238158231E44FD0060BC1F /* myTimeUITests.swift in Sources */,
+				931A56DA233903C600A50425 /* AllAround.swift in Sources */,
 				93C2D6352338F055004BF123 /* MeditationTests.swift in Sources */,
 				FA630FE02338F2960021883D /* JournalEntryTest.swift in Sources */,
 				93C2D6332338EE4E004BF123 /* ProfileTests.swift in Sources */,

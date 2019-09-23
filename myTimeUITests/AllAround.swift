@@ -10,7 +10,7 @@ import Foundation
 
 import XCTest
 
-class MeditationTests: XCTestCase {
+class AllAround: XCTestCase {
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -29,21 +29,22 @@ class MeditationTests: XCTestCase {
     }
     
     func testExample() {
-
+        
+      
         
         let app = XCUIApplication()
-        XCTAssertEqual(app.tabBars.buttons["Relax"].label, "Relax")
+        let tabBarsQuery = app.tabBars
+        tabBarsQuery.buttons["Relax"].tap()
+        tabBarsQuery.buttons["Profile"].tap()
+        tabBarsQuery.buttons["Journal"].tap()
+        app.collectionViews/*@START_MENU_TOKEN@*/.buttons["Sep"]/*[[".cells.buttons[\"Sep\"]",".buttons[\"Sep\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app/*@START_MENU_TOKEN@*/.otherElements["PopoverDismissRegion"]/*[[".otherElements[\"dismiss popup\"]",".otherElements[\"PopoverDismissRegion\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        let navigationBarsQuery = app.navigationBars
+        navigationBarsQuery.buttons["Compose"].tap()
+        navigationBarsQuery.buttons["Delete"].tap()
         
         
-        XCTAssertEqual(app.buttons["START"].label, "START")
-        
-        
-        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.tap()
-        XCTAssertEqual(app.navigationBars.buttons["Back"].label, "Back")
- 
-        
-        
-
-}
-
+    }
+    
 }

@@ -96,11 +96,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "myTimeUITests/MeditationTests.swift"
-            timestampString = "590934188.5010951"
+            timestampString = "590939138.544832"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
             endingLineNumber = "33"
+            landmarkName = "testExample()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "myTimeUITests/AllAround.swift"
+            timestampString = "590939138.545013"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "testExample()"
             landmarkType = "7">
          </BreakpointContent>
