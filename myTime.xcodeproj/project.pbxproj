@@ -26,6 +26,7 @@
 		FA3772A723385796007612F5 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3772A623385796007612F5 /* GradientView.swift */; };
 		FA3B917423323171005AEB53 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B917323323171005AEB53 /* TableCell.swift */; };
 		FA3B917623325805005AEB53 /* TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B917523325805005AEB53 /* TableViewDelegate.swift */; };
+		FA630FE02338F2960021883D /* JournalEntryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA630FDF2338F2960021883D /* JournalEntryTest.swift */; };
 		FA6C64502338EADC004E195C /* MoodOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C644D2338EADC004E195C /* MoodOptionView.swift */; };
 		FA6C64512338EADC004E195C /* MoodSelectDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C644E2338EADC004E195C /* MoodSelectDelegate.swift */; };
 		FA6C64522338EADC004E195C /* JournalEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C644F2338EADC004E195C /* JournalEntryView.swift */; };
@@ -92,6 +93,7 @@
 		FA3772A623385796007612F5 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		FA3B917323323171005AEB53 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		FA3B917523325805005AEB53 /* TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDelegate.swift; sourceTree = "<group>"; };
+		FA630FDF2338F2960021883D /* JournalEntryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryTest.swift; sourceTree = "<group>"; };
 		FA6C644D2338EADC004E195C /* MoodOptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodOptionView.swift; sourceTree = "<group>"; };
 		FA6C644E2338EADC004E195C /* MoodSelectDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodSelectDelegate.swift; sourceTree = "<group>"; };
 		FA6C644F2338EADC004E195C /* JournalEntryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalEntryView.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				FA238159231E44FD0060BC1F /* Info.plist */,
 				93C2D6322338EE4E004BF123 /* ProfileTests.swift */,
 				93C2D6342338F055004BF123 /* MeditationTests.swift */,
+				FA630FDF2338F2960021883D /* JournalEntryTest.swift */,
 			);
 			path = myTimeUITests;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 			files = (
 				FA238158231E44FD0060BC1F /* myTimeUITests.swift in Sources */,
 				93C2D6352338F055004BF123 /* MeditationTests.swift in Sources */,
+				FA630FE02338F2960021883D /* JournalEntryTest.swift in Sources */,
 				93C2D6332338EE4E004BF123 /* ProfileTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
