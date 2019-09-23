@@ -10,12 +10,12 @@
 import Foundation
 import UIKit
 
-class TimerControllerView: UIViewController, CAAnimationDelegate  {
+class TimerControllerView: UIViewController {
     
     var countdownLayer = CAShapeLayer()
     var countdownTrackLayer = CAShapeLayer()
     var circleLayer = CAShapeLayer()
-    var duration: Int = 40
+    var duration: TimeInterval = 10
     var timer = Timer()
     var center:CGPoint?
     var tapped = false {
@@ -58,11 +58,21 @@ class TimerControllerView: UIViewController, CAAnimationDelegate  {
         animateCircle(shapeLayer: circleLayer)
         
         drawCountdownPaths(color: self.darkColor)
-        let animationDuration = duration
-        animateCountdown(shapeLayer: countdownLayer, duration: animationDuration)
+        animateCountdown(shapeLayer: countdownLayer, duration: duration)
         
         countdownTrackLayer.opacity = 0
         countdownLayer.opacity = 0
+        
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {
+            // this is the code that the timer runs every second
+            (_:Timer)->Void in //  the Timer object is passed in, but we ignore it
+            if(self.duration > 0) {
+                self.duration -= 1 ; // decrement the duration
+            } else {
+                self.timer.invalidate()
+            }
+            //self.label.text = String(self.duration) // set label's text to be the remaining time
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -74,7 +84,7 @@ class TimerControllerView: UIViewController, CAAnimationDelegate  {
         animateCountdown(shapeLayer: countdownLayer, duration: duration)
     }
     
-    private func drawCountdownPaths(color: CGColor) {
+    func drawCountdownPaths(color: CGColor) {
         center = view.center
         drawCountdownPath(shapeLayer: countdownTrackLayer, color: color, toBeAnimated: false)
         drawCountdownPath(shapeLayer: countdownLayer, color: UIColor.gray.cgColor, toBeAnimated: true)
@@ -97,23 +107,23 @@ class TimerControllerView: UIViewController, CAAnimationDelegate  {
         view.layer.addSublayer(shapeLayer)
     }
     
-    private func animateCountdown(shapeLayer: CAShapeLayer, duration: Int) {
+    private func animateCountdown(shapeLayer: CAShapeLayer, duration: TimeInterval) {
         
         let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
-        
+    
         basicAnimation.toValue = 1
-        basicAnimation.duration = Double(duration)
+        basicAnimation.duration = 40
         // Allows the edge the stay when finished
         basicAnimation.fillMode = kCAFillModeForwards
         basicAnimation.isRemovedOnCompletion = false
-        basicAnimation.delegate = self
+        
         shapeLayer.add(basicAnimation, forKey: "countdown")
         
     }
     
     private func drawCircle(shapeLayer: CAShapeLayer, color: CGColor) {
         center = view.center
-        let circularPath = UIBezierPath(arcCenter: center!, radius: 25, startAngle: -CGFloat.pi / 2, endAngle: 3 * CGFloat.pi / 2, clockwise: true)
+        let circularPath = UIBezierPath(arcCenter: center!, radius: 25, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
         
         shapeLayer.path = circularPath.cgPath
         // Elements of the circle
@@ -135,17 +145,7 @@ class TimerControllerView: UIViewController, CAAnimationDelegate  {
         basicAnimation.autoreverses = true
         basicAnimation.repeatCount = Float.infinity
         
-        basicAnimation.delegate = self
         shapeLayer.add(basicAnimation, forKey: "breathe")
         
-    }
-    
-    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        if flag {
-            let alert = UIAlertController(title: "Time's Up!", message: "Back to work!", preferredStyle: .alert)
-            let action = UIAlertAction(title: "Return", style: .default)
-            alert.addAction(action)
-            present(alert, animated: true, completion:nil)
-        }
     }
 }
