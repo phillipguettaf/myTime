@@ -46,7 +46,8 @@ class MonthButton: UIView {
                 default:
                     monthTitle = "NA"
             }
-            button.setTitle(monthTitle, for: .normal)
+            let title = NSMutableAttributedString(string: monthTitle, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 17, weight: .thin)])
+            button.setAttributedTitle(title, for: .normal)
             self.calculateBackgroundColour()
         }
     }
