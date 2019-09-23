@@ -39,9 +39,16 @@ class ProfileScrollView: UIScrollView {
             
         }
         
+        
+        
         // Sets the data inside chart
         let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Month")
         let moodDataSet = LineChartDataSet(entries: dataEntries, label: "Month")
+        
+        // delete value display inside chart
+        chartDataSet.drawValuesEnabled = false
+        moodDataSet.drawValuesEnabled = false
+
         
         // Combines the data into a variable chartData to be called inside the viewDidLoad
         let chartData = BarChartData(dataSet: chartDataSet)
@@ -50,6 +57,12 @@ class ProfileScrollView: UIScrollView {
         
         chartDataSet.valueFont = UIFont(name: "Verdana", size: 12.0)!
         moodDataSet.valueFont = UIFont(name: "Verdana", size: 12.0)!
+        
+        // Remove Top and Bottom values
+        aveMood.rightAxis.drawLabelsEnabled = false
+        aveMood.xAxis.drawLabelsEnabled = false
+        frequency.rightAxis.drawLabelsEnabled = false
+        frequency.xAxis.drawLabelsEnabled = false
         
         aveMood.data = moodData
         frequency.data = chartData
