@@ -16,12 +16,16 @@ class JournalEntryView: UIViewController, UIPopoverPresentationControllerDelegat
     @IBOutlet weak var save: UIBarButtonItem!
     @IBOutlet weak var moodSelect: UIBarButtonItem!
     @IBOutlet weak var back: UIBarButtonItem!
+    @IBOutlet weak var navbar: UINavigationBar!
     
     var mood:Float?
     var content:String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navbar.setBackgroundImage(UIImage(),for: .default)
+        navbar.shadowImage = UIImage()
+        navbar.isTranslucent = true
     }
     
     // Prepare data for the mood selector

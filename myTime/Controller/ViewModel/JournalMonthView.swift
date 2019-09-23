@@ -13,6 +13,7 @@ class JournalMonthView: UIViewController, UIPopoverPresentationControllerDelegat
     
     @IBOutlet weak var months: UICollectionView!
     @IBOutlet weak var yearPicker: UIPickerView!
+    @IBOutlet weak var navbar: UINavigationBar!
     
     var tableViewDelegate: TableViewDelegate?
     var selectedMonth: JournalPage?
@@ -27,6 +28,10 @@ class JournalMonthView: UIViewController, UIPopoverPresentationControllerDelegat
         yearPicker.delegate = self
         yearPicker.dataSource = self
         months.register(MonthCell.self, forCellWithReuseIdentifier: "cell")
+        navbar.setBackgroundImage(UIImage(),for: .default)
+        navbar.shadowImage = UIImage()
+        navbar.isTranslucent = true
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,7 +49,6 @@ class JournalMonthView: UIViewController, UIPopoverPresentationControllerDelegat
             tableViewController.delegate = self
         }
     }
-    
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()

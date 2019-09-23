@@ -19,8 +19,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.12780109049999999" green="0.31013342739999999" blue="0.3162297308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="separatorColor" red="0.12780109049999999" green="0.31013342739999999" blue="0.3162297308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="sectionIndexBackgroundColor" red="0.12780109049999999" green="0.31013342739999999" blue="0.3162297308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
                             <outlet property="dataSource" destination="YLk-BA-vDX" id="9MJ-bV-vJH"/>
                             <outlet property="delegate" destination="YLk-BA-vDX" id="M46-eV-bGc"/>
@@ -33,24 +31,22 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2pE-0b-eq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1650" y="-1356"/>
+            <point key="canvasLocation" x="2130" y="-1315"/>
         </scene>
         <!--JournalMonthView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController title="JournalMonthView" id="BYZ-38-t0r" customClass="JournalMonthView" customModule="myTime" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GradientView" customModule="myTime" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iw2-Eb-IT2">
+                            <navigationBar opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iw2-Eb-IT2">
                                 <rect key="frame" x="0.0" y="40" width="320" height="30"/>
-                                <color key="backgroundColor" red="0.12780109047889709" green="0.3101334273815155" blue="0.31622973084449768" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="BLJ-mw-9Zb"/>
                                 </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="barTintColor" red="0.12780109049999999" green="0.31013342739999999" blue="0.3162297308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem id="ohM-H5-1nB">
                                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="iMZ-4Y-1Wm">
@@ -63,7 +59,7 @@
                             </navigationBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CYo-b9-otz">
                                 <rect key="frame" x="60" y="150" width="200" height="289"/>
-                                <color key="backgroundColor" red="0.12780109049999999" green="0.31013342739999999" blue="0.3162297308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="148-JM-0TZ">
                                     <size key="itemSize" width="70" height="70"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -82,7 +78,6 @@
                                 </constraints>
                             </pickerView>
                         </subviews>
-                        <color key="backgroundColor" red="0.12780109049999999" green="0.31013342739999999" blue="0.3162297308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Iw2-Eb-IT2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="E1z-xX-Hxp"/>
                             <constraint firstItem="Iw2-Eb-IT2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EIo-IO-Yw9"/>
@@ -96,11 +91,23 @@
                             <constraint firstItem="Iw2-Eb-IT2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tbi-fw-hSu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="0.074509803920000006" green="0.30588235289999999" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" red="0.14901960780000001" green="0.47058823529999999" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="angle">
+                                <real key="value" value="-45"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <tabBarItem key="tabBarItem" title="Journal" image="JournalIcon" id="eO4-sc-bre"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="months" destination="CYo-b9-otz" id="bHp-JQ-UC2"/>
+                        <outlet property="navbar" destination="Iw2-Eb-IT2" id="onf-vB-kFr"/>
                         <outlet property="yearPicker" destination="TCf-Aj-P3o" id="fge-5Q-epy"/>
                         <segue destination="YLk-BA-vDX" kind="popoverPresentation" identifier="tableViewPopover" popoverAnchorView="8bC-Xf-vdC" id="VrE-hb-iGU">
                             <popoverArrowDirection key="popoverArrowDirection"/>
@@ -114,24 +121,38 @@
         <!--Relax-->
         <scene sceneID="Ksg-d0-XiN">
             <objects>
-                <viewController id="mZe-Kg-qQS" customClass="ViewController" customModule="myTime" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Kww-D8-HNA">
+                <viewController id="mZe-Kg-qQS" customClass="RelaxViewController" customModule="myTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kww-D8-HNA" customClass="GradientView" customModule="myTime" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Meditation" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GcC-Mg-AlH">
-                                <rect key="frame" x="115" y="269" width="90" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="k0L-0v-OhE">
+                                <rect key="frame" x="1" y="340" width="320" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="590777240.82009006">
+                                    <!--2019-09-21 16:47:20 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdZ-ss-hLA">
+                                <rect key="frame" x="130" y="194" width="62" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Start"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.076101608574390411" green="0.3102957010269165" blue="0.31540995836257935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="GcC-Mg-AlH" firstAttribute="centerX" secondItem="Kww-D8-HNA" secondAttribute="centerX" id="c26-ab-zQ4"/>
-                            <constraint firstItem="GcC-Mg-AlH" firstAttribute="centerY" secondItem="Kww-D8-HNA" secondAttribute="centerY" id="xgY-Mo-Ise"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="40S-XD-lfU"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="0.074509803920000006" green="0.30588235289999999" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" red="0.14901960780000001" green="0.47058823529999999" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="angle">
+                                <real key="value" value="-45"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <tabBarItem key="tabBarItem" title="Relax" image="MeditationIcon" id="Q5X-Dv-W3W"/>
                 </viewController>
@@ -139,11 +160,37 @@
             </objects>
             <point key="canvasLocation" x="1350" y="254"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="PdX-qv-tz7">
+            <objects>
+                <viewController id="AEa-u4-62L" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aeE-aX-OyM" customClass="GradientView" customModule="myTime" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="zxJ-dK-1ui"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="0.074509803920000006" green="0.30588235289999999" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" red="0.14901960780000001" green="0.47058823529999999" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="angle">
+                                <real key="value" value="-45"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BUA-aT-Ghv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2150" y="253"/>
+        </scene>
         <!--Profile-->
         <scene sceneID="0xC-dT-Crb">
             <objects>
                 <viewController title="Profile" id="7By-DU-WqW" customClass="ProfileBarChartView" customModule="myTime" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1Qk-HH-FOG">
+                    <view key="view" contentMode="scaleToFill" id="1Qk-HH-FOG" customClass="GradientView" customModule="myTime" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -225,7 +272,6 @@
                                 </connections>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.076101608574390411" green="0.3102957010269165" blue="0.31540995836257935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="uPa-5v-DjC" firstAttribute="leading" secondItem="AQN-od-iGA" secondAttribute="leading" constant="50" id="0lW-KL-2hU"/>
                             <constraint firstItem="AQN-od-iGA" firstAttribute="trailing" secondItem="uPa-5v-DjC" secondAttribute="trailing" constant="50" id="JJw-TE-MiP"/>
@@ -239,6 +285,17 @@
                             <constraint firstItem="AQN-od-iGA" firstAttribute="bottom" secondItem="Xb5-5F-EpH" secondAttribute="bottom" constant="20" id="yYR-uB-Qh5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AQN-od-iGA"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="0.074509803920000006" green="0.30588235289999999" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" red="0.14901960780000001" green="0.47058823529999999" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="angle">
+                                <real key="value" value="-45"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="ProfileIcon" id="Qv9-Tv-gAz"/>
                     <navigationItem key="navigationItem" id="nE1-v4-SDH"/>
@@ -273,19 +330,17 @@
         <scene sceneID="h7m-aF-VVz">
             <objects>
                 <viewController title="JournalEntryView" id="BGw-hO-a53" customClass="JournalEntryView" customModule="myTime" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CZS-lb-ula">
+                    <view key="view" contentMode="scaleToFill" id="CZS-lb-ula" customClass="GradientView" customModule="myTime" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxz-vU-Sjo">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rxz-vU-Sjo">
                                 <rect key="frame" x="0.0" y="40" width="320" height="30"/>
-                                <color key="backgroundColor" red="0.12780109049999999" green="0.31013342739999999" blue="0.3162297308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="6q3-tX-8du"/>
                                     <constraint firstAttribute="height" constant="30" id="zZc-jj-8P5"/>
                                 </constraints>
-                                <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <color key="barTintColor" red="0.12780109049999999" green="0.31013342739999999" blue="0.3162297308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
                                     <navigationItem id="iQ2-Xk-w2H">
                                         <barButtonItem key="leftBarButtonItem" systemItem="trash" id="6CK-mb-8qZ">
@@ -318,7 +373,6 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.12780109047889709" green="0.3101334273815155" blue="0.31622973084449768" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="rxz-vU-Sjo" firstAttribute="leading" secondItem="HoG-cA-diK" secondAttribute="leading" id="AQx-RO-UP6"/>
                             <constraint firstItem="rxz-vU-Sjo" firstAttribute="top" secondItem="HoG-cA-diK" secondAttribute="top" constant="20" id="ItS-OR-bRL"/>
@@ -329,17 +383,29 @@
                             <constraint firstItem="rxz-vU-Sjo" firstAttribute="trailing" secondItem="HoG-cA-diK" secondAttribute="trailing" id="iMy-1E-nop"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HoG-cA-diK"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" red="0.074509803920000006" green="0.30588235289999999" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" red="0.14901960780000001" green="0.47058823529999999" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="angle">
+                                <real key="value" value="-45"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="back" destination="6CK-mb-8qZ" id="B0v-D9-wEd"/>
                         <outlet property="journalEntryInput" destination="lAT-iz-NzF" id="H7L-hW-uFz"/>
                         <outlet property="moodSelect" destination="8lq-Pd-CSl" id="mC2-0d-AF7"/>
+                        <outlet property="navbar" destination="rxz-vU-Sjo" id="aBX-fQ-eB4"/>
                         <outlet property="save" destination="N5s-SW-rU3" id="WQM-xG-fAZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jiv-JB-clO" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2136" y="-469"/>
+            <point key="canvasLocation" x="2130" y="-487"/>
         </scene>
         <!--MoodOptionView-->
         <scene sceneID="3F4-7T-Utd">
@@ -423,7 +489,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MR3-Wj-bRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2976" y="-469"/>
+            <point key="canvasLocation" x="2963" y="-487"/>
         </scene>
     </scenes>
     <resources>
