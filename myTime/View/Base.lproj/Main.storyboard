@@ -244,25 +244,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="zls-Fv-rUV">
-                                <rect key="frame" x="122.5" y="50" width="75" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="B1q-Jj-e3l"/>
-                                    <constraint firstAttribute="height" constant="63" id="zrp-ZM-Cl3"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Smith" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPa-5v-DjC">
                                 <rect key="frame" x="50" y="128" width="220" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="5IX-HU-09D"/>
-                                    <constraint firstAttribute="height" constant="20" id="iqx-NB-9X0"/>
+                                    <constraint firstAttribute="height" constant="20" id="iqx-NB-9X0">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="151"/>
+                                    </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="100"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </variation>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb5-5F-EpH" customClass="ProfileScrollView" customModule="myTime" customModuleProvider="target">
-                                <rect key="frame" x="20" y="168" width="280" height="331"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="zls-Fv-rUV">
+                                <rect key="frame" x="122.5" y="50" width="75" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="B1q-Jj-e3l">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="112"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="63" id="zrp-ZM-Cl3">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="116"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb5-5F-EpH" customClass="ProfileScrollView" customModule="myTime" customModuleProvider="target">
+                                <rect key="frame" x="20" y="185" width="280" height="334"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Journal Frequency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="96p-Xe-vLS">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="20"/>
@@ -273,16 +283,68 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MvJ-C7-3bJ" customClass="BarChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="20" width="280" height="200"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MvJ-C7-3bJ" customClass="BarChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="20" width="280" height="130"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="Rjv-8v-QvT"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="gCu-ld-0by"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="gCu-ld-0by">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="130"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="200" id="mVQ-aD-J71">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="130"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="200" id="z8a-tD-rsz"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="mVQ-aD-J71"/>
+                                                <exclude reference="z8a-tD-rsz"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="mVQ-aD-J71"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="z8a-tD-rsz"/>
+                                            </mask>
+                                        </variation>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Average Mood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bq-hx-vRr">
-                                        <rect key="frame" x="0.0" y="230" width="280" height="20"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vtl-P8-ctr" customClass="LineChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="199" width="280" height="107"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="fGO-Q4-c1Q">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="107"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="pcu-va-I2j">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="107"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="uKg-Mb-pSO"/>
+                                            <constraint firstAttribute="height" constant="200" id="xIx-EU-lUD"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="fGO-Q4-c1Q"/>
+                                                <exclude reference="xIx-EU-lUD"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="fGO-Q4-c1Q"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="xIx-EU-lUD"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Mood" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bq-hx-vRr">
+                                        <rect key="frame" x="0.0" y="171" width="280" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="LmY-rF-HxL"/>
                                         </constraints>
@@ -290,32 +352,42 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vtl-P8-ctr" customClass="LineChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="250" width="280" height="200"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="pcu-va-I2j"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="uKg-Mb-pSO"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="MvJ-C7-3bJ" secondAttribute="trailing" id="1ta-uE-rd5"/>
+                                    <constraint firstAttribute="width" constant="500" id="Boj-hi-q1n"/>
                                     <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Vtl-P8-ctr" secondAttribute="trailing" id="Bvz-g8-7NS"/>
-                                    <constraint firstItem="Vtl-P8-ctr" firstAttribute="top" secondItem="8bq-hx-vRr" secondAttribute="bottom" id="D72-MP-2E2"/>
+                                    <constraint firstItem="Vtl-P8-ctr" firstAttribute="top" secondItem="8bq-hx-vRr" secondAttribute="bottom" id="D72-MP-2E2">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                                    </constraint>
                                     <constraint firstAttribute="trailing" secondItem="8bq-hx-vRr" secondAttribute="trailing" id="DKy-Z6-hq5"/>
                                     <constraint firstItem="96p-Xe-vLS" firstAttribute="top" secondItem="Xb5-5F-EpH" secondAttribute="top" id="IFv-hq-nQi"/>
                                     <constraint firstItem="MvJ-C7-3bJ" firstAttribute="top" secondItem="96p-Xe-vLS" secondAttribute="bottom" id="Qke-St-PCz"/>
-                                    <constraint firstAttribute="bottom" secondItem="Vtl-P8-ctr" secondAttribute="bottom" id="WSX-5z-0UI"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vtl-P8-ctr" secondAttribute="bottom" id="WSX-5z-0UI">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="28"/>
+                                        <variation key="heightClass=regular-widthClass=regular" constant="360"/>
+                                    </constraint>
                                     <constraint firstItem="96p-Xe-vLS" firstAttribute="leading" secondItem="Xb5-5F-EpH" secondAttribute="leading" id="XeG-Qj-s2R"/>
                                     <constraint firstItem="8bq-hx-vRr" firstAttribute="leading" secondItem="Xb5-5F-EpH" secondAttribute="leading" id="d4r-Od-NgX"/>
                                     <constraint firstItem="MvJ-C7-3bJ" firstAttribute="centerX" secondItem="Xb5-5F-EpH" secondAttribute="centerX" id="ifr-50-pYB"/>
                                     <constraint firstAttribute="trailing" secondItem="96p-Xe-vLS" secondAttribute="trailing" id="lnx-aO-3em"/>
                                     <constraint firstItem="Vtl-P8-ctr" firstAttribute="leading" secondItem="Xb5-5F-EpH" secondAttribute="leading" id="nSK-6l-neA"/>
                                     <constraint firstItem="Vtl-P8-ctr" firstAttribute="centerX" secondItem="Xb5-5F-EpH" secondAttribute="centerX" id="nwa-eb-U8f"/>
-                                    <constraint firstItem="8bq-hx-vRr" firstAttribute="top" secondItem="MvJ-C7-3bJ" secondAttribute="bottom" constant="10" id="obW-jK-DHe"/>
+                                    <constraint firstItem="8bq-hx-vRr" firstAttribute="top" secondItem="MvJ-C7-3bJ" secondAttribute="bottom" constant="10" id="obW-jK-DHe">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="21"/>
+                                    </constraint>
                                     <constraint firstItem="MvJ-C7-3bJ" firstAttribute="leading" secondItem="Xb5-5F-EpH" secondAttribute="leading" id="wRV-iQ-vAi"/>
                                 </constraints>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="Boj-hi-q1n"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="Boj-hi-q1n"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="aveMood" destination="Vtl-P8-ctr" id="6lB-9T-xVw"/>
                                     <outlet property="frequency" destination="MvJ-C7-3bJ" id="zDX-M3-unq"/>
@@ -324,15 +396,31 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="uPa-5v-DjC" firstAttribute="leading" secondItem="AQN-od-iGA" secondAttribute="leading" constant="50" id="0lW-KL-2hU"/>
+                            <constraint firstItem="AQN-od-iGA" firstAttribute="trailing" secondItem="Xb5-5F-EpH" secondAttribute="trailing" constant="20" id="I4D-8G-Qgq"/>
                             <constraint firstItem="AQN-od-iGA" firstAttribute="trailing" secondItem="uPa-5v-DjC" secondAttribute="trailing" constant="50" id="JJw-TE-MiP"/>
-                            <constraint firstItem="Xb5-5F-EpH" firstAttribute="top" secondItem="uPa-5v-DjC" secondAttribute="bottom" constant="20" id="Wdb-jJ-jdb"/>
-                            <constraint firstItem="zls-Fv-rUV" firstAttribute="top" secondItem="AQN-od-iGA" secondAttribute="top" constant="30" id="Wvq-Ja-7LY"/>
+                            <constraint firstItem="Xb5-5F-EpH" firstAttribute="top" secondItem="uPa-5v-DjC" secondAttribute="bottom" constant="20" id="Wdb-jJ-jdb">
+                                <variation key="heightClass=regular-widthClass=regular" constant="310"/>
+                            </constraint>
+                            <constraint firstItem="zls-Fv-rUV" firstAttribute="top" secondItem="AQN-od-iGA" secondAttribute="top" constant="30" id="Wvq-Ja-7LY">
+                                <variation key="heightClass=regular-widthClass=regular" constant="74"/>
+                            </constraint>
                             <constraint firstItem="zls-Fv-rUV" firstAttribute="centerX" secondItem="1Qk-HH-FOG" secondAttribute="centerX" id="YGp-9L-R0w"/>
+                            <constraint firstItem="Xb5-5F-EpH" firstAttribute="top" secondItem="uPa-5v-DjC" secondAttribute="bottom" constant="200" id="Yeo-Jk-bjx">
+                                <variation key="heightClass=regular-widthClass=compact" constant="37"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="110"/>
+                            </constraint>
                             <constraint firstItem="Xb5-5F-EpH" firstAttribute="leading" secondItem="AQN-od-iGA" secondAttribute="leading" constant="20" id="aLN-im-xLC"/>
+                            <constraint firstItem="AQN-od-iGA" firstAttribute="trailing" secondItem="Xb5-5F-EpH" secondAttribute="trailing" constant="20" id="kaT-GM-rsq"/>
                             <constraint firstItem="Xb5-5F-EpH" firstAttribute="centerX" secondItem="1Qk-HH-FOG" secondAttribute="centerX" id="le6-HN-hCe"/>
-                            <constraint firstItem="uPa-5v-DjC" firstAttribute="top" secondItem="zls-Fv-rUV" secondAttribute="bottom" constant="15" id="nBj-7H-3NU"/>
+                            <constraint firstItem="uPa-5v-DjC" firstAttribute="top" secondItem="zls-Fv-rUV" secondAttribute="bottom" constant="15" id="nBj-7H-3NU">
+                                <variation key="heightClass=regular-widthClass=regular" constant="8"/>
+                            </constraint>
                             <constraint firstItem="AQN-od-iGA" firstAttribute="trailing" secondItem="Xb5-5F-EpH" secondAttribute="trailing" constant="20" id="nZm-bX-063"/>
-                            <constraint firstItem="AQN-od-iGA" firstAttribute="bottom" secondItem="Xb5-5F-EpH" secondAttribute="bottom" constant="20" id="yYR-uB-Qh5"/>
+                            <constraint firstItem="AQN-od-iGA" firstAttribute="bottom" secondItem="Xb5-5F-EpH" secondAttribute="bottom" constant="20" id="yYR-uB-Qh5">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="-274"/>
+                            </constraint>
+                            <constraint firstItem="AQN-od-iGA" firstAttribute="trailing" secondItem="Xb5-5F-EpH" secondAttribute="trailing" constant="20" id="yle-hd-ehi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AQN-od-iGA"/>
                         <userDefinedRuntimeAttributes>
@@ -346,6 +434,26 @@
                                 <real key="value" value="-45"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="I4D-8G-Qgq"/>
+                                <exclude reference="kaT-GM-rsq"/>
+                                <exclude reference="yle-hd-ehi"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="I4D-8G-Qgq"/>
+                                <include reference="kaT-GM-rsq"/>
+                                <include reference="yle-hd-ehi"/>
+                                <exclude reference="Wdb-jJ-jdb"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="Wdb-jJ-jdb"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="ProfileIcon" id="Qv9-Tv-gAz"/>
                     <navigationItem key="navigationItem" id="nE1-v4-SDH"/>
@@ -355,7 +463,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V51-yA-POf" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1350" y="1025.7042253521126"/>
+            <point key="canvasLocation" x="1348.125" y="1023.5915492957747"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kH0-4W-NyX">

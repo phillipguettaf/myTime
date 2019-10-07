@@ -10,6 +10,10 @@
 		277987F38184CF8100D7371E /* libPods-myTimeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B8DDFCD815E51BED47F29C9 /* libPods-myTimeTests.a */; };
 		931A56DA233903C600A50425 /* AllAround.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931A56D9233903C600A50425 /* AllAround.swift */; };
 		931A56DC2339048D00A50425 /* JournalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931A56DB2339048D00A50425 /* JournalList.swift */; };
+		93205C6C234B057900592728 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93205C6B234B057900592728 /* ProfileTests.swift */; };
+		93205C6E234B058E00592728 /* JournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93205C6D234B058E00592728 /* JournalTests.swift */; };
+		93205C70234B059F00592728 /* MeditationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93205C6F234B059F00592728 /* MeditationTests.swift */; };
+		93205C72234B05C900592728 /* MoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93205C71234B05C900592728 /* MoodTests.swift */; };
 		9393827E2335C9ED00EECE5D /* ProfileMasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9393827D2335C9ED00EECE5D /* ProfileMasterView.swift */; };
 		93C2D6332338EE4E004BF123 /* ProfileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C2D6322338EE4E004BF123 /* ProfileTests.swift */; };
 		93C2D6352338F055004BF123 /* MeditationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C2D6342338F055004BF123 /* MeditationTests.swift */; };
@@ -20,7 +24,6 @@
 		FA238137231E44F30060BC1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA238136231E44F30060BC1F /* ViewController.swift */; };
 		FA23813A231E44F30060BC1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA238138231E44F30060BC1F /* Main.storyboard */; };
 		FA23813F231E44FC0060BC1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA23813E231E44FC0060BC1F /* Assets.xcassets */; };
-		FA23814D231E44FD0060BC1F /* myTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA23814C231E44FD0060BC1F /* myTimeTests.swift */; };
 		FA238158231E44FD0060BC1F /* myTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA238157231E44FD0060BC1F /* myTimeUITests.swift */; };
 		FA2F5B6923314195008A9E94 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F5B6823314195008A9E94 /* Journal.swift */; };
 		FA2F5B7423322E38008A9E94 /* JournalTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2F5B7323322E38008A9E94 /* JournalTableView.swift */; };
@@ -69,6 +72,10 @@
 		8492F7A12D0DAEC2BBC2C933 /* Pods-myTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myTime.release.xcconfig"; path = "Target Support Files/Pods-myTime/Pods-myTime.release.xcconfig"; sourceTree = "<group>"; };
 		931A56D9233903C600A50425 /* AllAround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAround.swift; sourceTree = "<group>"; };
 		931A56DB2339048D00A50425 /* JournalList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalList.swift; sourceTree = "<group>"; };
+		93205C6B234B057900592728 /* ProfileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTests.swift; sourceTree = "<group>"; };
+		93205C6D234B058E00592728 /* JournalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTests.swift; sourceTree = "<group>"; };
+		93205C6F234B059F00592728 /* MeditationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationTests.swift; sourceTree = "<group>"; };
+		93205C71234B05C900592728 /* MoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTests.swift; sourceTree = "<group>"; };
 		9393827D2335C9ED00EECE5D /* ProfileMasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMasterView.swift; sourceTree = "<group>"; };
 		939382802335CAB800EECE5D /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		939382862335CB9500EECE5D /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,7 +93,6 @@
 		FA23813E231E44FC0060BC1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA238143231E44FC0060BC1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA238148231E44FD0060BC1F /* myTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA23814C231E44FD0060BC1F /* myTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTimeTests.swift; sourceTree = "<group>"; };
 		FA23814E231E44FD0060BC1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA238153231E44FD0060BC1F /* myTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA238157231E44FD0060BC1F /* myTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTimeUITests.swift; sourceTree = "<group>"; };
@@ -226,8 +232,11 @@
 		FA23814B231E44FD0060BC1F /* myTimeTests */ = {
 			isa = PBXGroup;
 			children = (
-				FA23814C231E44FD0060BC1F /* myTimeTests.swift */,
+				93205C6B234B057900592728 /* ProfileTests.swift */,
 				FA23814E231E44FD0060BC1F /* Info.plist */,
+				93205C6D234B058E00592728 /* JournalTests.swift */,
+				93205C6F234B059F00592728 /* MeditationTests.swift */,
+				93205C71234B05C900592728 /* MoodTests.swift */,
 			);
 			path = myTimeTests;
 			sourceTree = "<group>";
@@ -553,7 +562,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA23814D231E44FD0060BC1F /* myTimeTests.swift in Sources */,
+				93205C6E234B058E00592728 /* JournalTests.swift in Sources */,
+				93205C70234B059F00592728 /* MeditationTests.swift in Sources */,
+				93205C6C234B057900592728 /* ProfileTests.swift in Sources */,
+				93205C72234B05C900592728 /* MoodTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
