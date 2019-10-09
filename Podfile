@@ -5,6 +5,9 @@ target 'myTime' do
   
 
   pod 'Charts'
+  pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Analytics'
 
   target 'myTimeTests' do
     inherit! :search_paths
@@ -16,5 +19,7 @@ target 'myTime' do
     # Pods for testing
 	
   end
+
+  
 
 end

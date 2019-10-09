@@ -9,6 +9,6 @@
 import Foundation
 import UIKit
 
-protocol MoodSelectDelegate: UIViewController {
+protocol MoodSelectDelegate: AnyObject {
     func selectMood(mood: Float, image: String)
 }

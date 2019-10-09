@@ -61,6 +61,10 @@ class JournalEntryView: UIViewController, UIPopoverPresentationControllerDelegat
             entry.mood = actualMood
             entry.timeStamp = currentDate as NSDate
             // Save information to container and dismiss the view
+            Journal.journal.entries.append(entry)
+            Journal.journal.updateJournal(Journal.journal.entries)
+            
+            CloudStorage.shared.create(journalToSave: Journal.journal.entries)
             JournalContainer.saveContext()
             self.dismiss(animated: true, completion: nil)
             
@@ -74,6 +78,3 @@ class JournalEntryView: UIViewController, UIPopoverPresentationControllerDelegat
     }
 }
 
-extension JournalEntryView: UITextViewDelegate {
-    
-}

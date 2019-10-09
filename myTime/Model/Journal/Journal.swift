@@ -10,18 +10,31 @@ import Foundation
 import CoreData
 
 class Journal {
-    var entries: [JournalEntry]
-    // Pages sorted by [Year: [Month: Page]]
-    var pages: [Int: [Int: JournalPage]]
+
+    private init() {}
     
-    init() {
+    static var journal = Journal()
+    var entries: [JournalEntry] = []
+    // Pages sorted by [Year: [Month: Page]]
+    var pages: [Int: [Int: JournalPage]] = [:]
+    var loadedFromCloud = false
+    weak var updateDelegate: JournalUpdateDelegate?
+    
+    func load() {
         // Create fetch request (to get data from the container)
         let fetchRequest: NSFetchRequest<JournalEntry> = JournalEntry.fetchRequest()
         pages = [:]
         do {
-            // Get array of entries
-            let entries = try JournalContainer.context.fetch(fetchRequest)
-            self.entries = entries
+            
+            if !loadedFromCloud {
+                CloudStorage.shared.readOnLoad()
+            }
+            
+            if self.entries == [] {
+                self.entries = try JournalContainer.context.fetch(fetchRequest)
+                if self.entries.count > 0 {CloudStorage.shared.create(journalToSave: entries)}
+            }
+            
             if entries.count == 0 {
                 let calendar = Calendar.current
                 let today = Date()
@@ -62,6 +75,14 @@ class Journal {
                 page.calculateAverageMood()
             }
         }
+    }
+    
+    func updateJournal(_ journalEntries: [JournalEntry]) {
+        print("Journal update: ")
+        Journal.journal.loadedFromCloud = true
+        Journal.journal.entries = journalEntries
+        Journal.journal.load()
+        updateDelegate?.updateJournal()
     }
 }
 

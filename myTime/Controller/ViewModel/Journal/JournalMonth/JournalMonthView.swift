@@ -9,7 +9,12 @@
 import Foundation
 import UIKit
 
-class JournalMonthView: UIViewController, UIPopoverPresentationControllerDelegate, TableViewDelegate {
+class JournalMonthView: UIViewController, UIPopoverPresentationControllerDelegate, TableViewDelegate, JournalUpdateDelegate {
+    
+    func updateJournal() {
+        self.journal = Journal.journal
+    }
+    
     
     @IBOutlet weak var months: UICollectionView!
     @IBOutlet weak var yearPicker: UIPickerView!
@@ -18,11 +23,22 @@ class JournalMonthView: UIViewController, UIPopoverPresentationControllerDelegat
     var tableViewDelegate: TableViewDelegate?
     var selectedMonth: JournalPage?
     
-    var journal: Journal?
+    var journal: Journal? {
+        didSet {
+            print("Changed journal")
+            self.months.reloadData()
+            self.yearPicker.reloadAllComponents()
+            self.navbar.reloadInputViews()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.journal = Journal()
+        self.journal = Journal.journal
+        journal?.updateDelegate = self
+        
+        self.journal?.load()
+        
         months.delegate = self
         months.dataSource = self
         yearPicker.delegate = self
@@ -36,7 +52,7 @@ class JournalMonthView: UIViewController, UIPopoverPresentationControllerDelegat
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.journal = Journal()
+        self.journal = Journal.journal
         yearPicker.reloadAllComponents()
         months.reloadData()
     }
@@ -84,22 +100,27 @@ extension JournalMonthView: UIPickerViewDataSource {
 extension JournalMonthView: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if let journalContents = journal {
-            return String(Array(journalContents.pages.keys).sorted(by: >)[row])
-        } else {
+            if (journalContents.entries != []) {
+                return String(Array(journalContents.pages.keys).sorted(by: >)[row])
+            } else {
             return "No entries: start adding some!"
+            }
         }
-}
+        return ""
+    }
 }
 
 extension JournalMonthView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         var numberOfItems: Int
         if let journalContents = journal {
-            let year = Array(journalContents.pages.keys).sorted(by: <)[yearPicker.selectedRow(inComponent: 0)]
-            numberOfItems = journalContents.pages[year]?.count ?? 1
-        } else {
-            numberOfItems = 1
+            if (journalContents.entries != []) {
+                let year = Array(journalContents.pages.keys).sorted(by: <)[yearPicker.selectedRow(inComponent: 0)]
+                numberOfItems = journalContents.pages[year]?.count ?? 1
+                return numberOfItems
+            }
         }
+        numberOfItems = 1
         return numberOfItems
     }
     
@@ -111,15 +132,14 @@ extension JournalMonthView: UICollectionViewDataSource {
     
         let cell = months.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! MonthCell
         if let journalContents = journal {
-            let year = Array(journalContents.pages.keys).sorted(by: <)[yearPicker.selectedRow(inComponent:0)]
-            let month = Array(journalContents.pages[year]!.keys).sorted(by:<)[indexPath.row]
-            let page = journalContents.pages[year]?[month]
-            
-            cell.tableDelegate = self
-            cell.monthPage = page
-            
-        } else {
-            
+            if (journalContents.entries != []) {
+                let year = Array(journalContents.pages.keys).sorted(by: <)[yearPicker.selectedRow(inComponent:0)]
+                let month = Array(journalContents.pages[year]!.keys).sorted(by:<)[indexPath.row]
+                let page = journalContents.pages[year]?[month]
+                
+                cell.tableDelegate = self
+                cell.monthPage = page
+            }
         }
         return cell
     }
