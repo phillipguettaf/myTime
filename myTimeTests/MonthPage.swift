@@ -8,18 +8,23 @@
 
 import XCTest
 @testable import myTime
-class MoodTests: XCTestCase {
+class MonthPage: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var MC: MonthCell = MonthCell();
+    
+    // Check For Already Existing Month page
+    func testPreMonthPage() {
+        let startUpPage = MC.monthPage
+        
+        // Check if There is initial month Page (Should be nil)
+        XCTAssertNil(startUpPage)
+        
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-
+        
 }
+
+
+
 
 // make at least four separate unit tests
 // containing pre-conditions, actions, post-conditions and Assertions

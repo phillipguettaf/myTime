@@ -10,30 +10,51 @@ import XCTest
 @testable import myTime
 
 class JournalTests: XCTestCase {
+    var journal: JournalEntryView = JournalEntryView();
+    var journalTable: TableCell = TableCell();
+    var TableView: JournalEntryView = JournalEntryView();
+    var moodView: MoodOptionView = MoodOptionView();
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testMoodValueBeforeClick() {
+            
+        // Making sure no fixed value was set before selecting mood
+        let moodGuess = journal.mood?.advanced(by: 0)
+        XCTAssertEqual(moodGuess, nil)
+            
+        let guess = journal.mood?.binade
+        XCTAssertEqual(guess, nil)
+
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    // Checking correct Entry
+    func testTableCell() {
+        let content = journalTable.entry?.content
+        
+        XCTAssertEqual(content, nil)
     }
-
-  
+    
+    func JournalTableView() {
+        let entryInput = TableView.journalEntryInput
+        
+        // Should Be nil since there is no pre loaded input
+        XCTAssertEqual(entryInput, nil)
+    }
+    
+    func testSelectMood() {
+        let guess = moodView.delegate
+        let mood = 0.0
+        let image = ""
+        
+        
+        if (guess != nil){
+            
+            let sadMood = guess!.selectMood(mood: 0.0, image: "Mood1VSad.pdf");
+            
+            XCTAssertEqual(mood, 0.0)
+            XCTAssertEqual(image, "Mood1VSad.pdf")
+            XCTAssertNotNil(sadMood, "Sad Selected")
+            
+        }
+        
+    }
 }
-
-// make at least four separate unit tests
-// containing pre-conditions, actions, post-conditions and Assertions
-//
-//}
-
-//func testScoreIsComputed() {
-//    // 1. given
-//    let guess = sut.targetValue + 5
-//
-//    // 2. when
-//    sut.check(guess: guess)
-//
-//    // 3. then
-//    XCTAssertEqual(sut.scoreRound, 95, "Score computed from guess is wrong")
-//}

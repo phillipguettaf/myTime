@@ -31,23 +31,9 @@ class JournalList: XCTestCase {
     func testExample() {
        
         let app = XCUIApplication()
-        app.tabBars.buttons["Journal"].tap()
-        
-        app.collectionViews/*@START_MENU_TOKEN@*/.buttons["Sep"]/*[[".cells.buttons[\"Sep\"]",".buttons[\"Sep\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        
-        let staticText = app.tables/*@START_MENU_TOKEN@*/.staticTexts["22/9/19"]/*[[".cells.staticTexts[\"22\/9\/19\"]",".staticTexts[\"22\/9\/19\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        staticText.tap()
-        staticText.tap()
+        app.collectionViews/*@START_MENU_TOKEN@*/.buttons["Oct"]/*[[".cells.buttons[\"Oct\"]",".buttons[\"Oct\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.tables.children(matching: .cell).element(boundBy: 2).staticTexts["20/10/19"].tap()
         app/*@START_MENU_TOKEN@*/.otherElements["PopoverDismissRegion"]/*[[".otherElements[\"dismiss popup\"]",".otherElements[\"PopoverDismissRegion\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app/*@START_MENU_TOKEN@*/.pickerWheels["2019"]/*[[".pickers.pickerWheels[\"2019\"]",".pickerWheels[\"2019\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app.navigationBars.buttons["Compose"].tap()
-        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.tap()
-           
-        
-        
-     
-        
-        
         
     }
     

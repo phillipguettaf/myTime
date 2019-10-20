@@ -33,17 +33,14 @@ class AllAround: XCTestCase {
       
         
         let app = XCUIApplication()
-        let tabBarsQuery = app.tabBars
-        tabBarsQuery.buttons["Relax"].tap()
-        tabBarsQuery.buttons["Profile"].tap()
-        tabBarsQuery.buttons["Journal"].tap()
-        app.collectionViews.buttons["Sep"].tap()
-        app/*@START_MENU_TOKEN@*/.otherElements["PopoverDismissRegion"]/*[[".otherElements[\"dismiss popup\"]",".otherElements[\"PopoverDismissRegion\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        
         let navigationBarsQuery = app.navigationBars
         navigationBarsQuery.buttons["Compose"].tap()
         navigationBarsQuery.buttons["Delete"].tap()
         
+        let tabBarsQuery = app.tabBars
+        tabBarsQuery.buttons["Relax"].tap()
+        tabBarsQuery.buttons["Profile"].tap()
+  
         
     }
     

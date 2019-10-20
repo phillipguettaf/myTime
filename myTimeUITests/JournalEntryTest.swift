@@ -27,28 +27,45 @@ class JournalEntryTest: XCTestCase {
     }
 
     func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        
+        
         let app = XCUIApplication()
+        let navigationBarsQuery = app.navigationBars
+        navigationBarsQuery.buttons["Compose"].tap()
+        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .textView).element.tap()
         
-        app.buttons["Compose"].tap()
+        let saveButton = navigationBarsQuery.buttons["Save"]
+        saveButton.tap()
+        app.alerts["Please select a mood"].buttons["Return"].tap()
+        navigationBarsQuery.buttons["Mood"].tap()
+        app.buttons["Mood4Happy"].tap()
+        saveButton.tap()
         
-        let isEntryViewPresent = app.otherElements["JournalEntryView"].exists
-        
-        XCTAssertTrue(isEntryViewPresent)
-        XCTAssertTrue(app.buttons["Mood Select"].exists)
-        XCTAssertTrue(app.buttons["Save"].exists)
-        XCTAssertTrue(app.buttons["Back"].exists)
-        
-        app.buttons["Mood Select"].tap()
-        XCTAssertTrue(app.otherElements["MoodOptionView"].exists)
-        
-        app.buttons["Mood1VSad"].tap()
-        app.textFields["entryField"].typeText("Dear Diary")
-        
-        app.buttons["Save"].tap()
-        
-        app.terminate()
+      
+     
+//        // Use recording to get started writing UI tests.
+//        // Use XCTAssert and related functions to verify your tests produce the correct results.
+//        let app = XCUIApplication()
+//
+//        app.buttons["Compose"].tap()
+//
+//        let isEntryViewPresent = app.otherElements["JournalEntryView"].exists
+//
+//
+//        XCTAssertTrue(app.buttons["Mood Select"].exists)
+//        XCTAssertTrue(app.buttons["Save"].exists)
+//        XCTAssertTrue(app.buttons["Back"].exists)
+//
+//        app.buttons["Mood Select"].tap()
+//        XCTAssertTrue(app.otherElements["MoodOptionView"].exists)
+//
+//        app.buttons["Mood1VSad"].tap()
+//        app.textFields["entryField"].typeText("Dear Diary")
+//
+//        app.buttons["Save"].tap()
+//
+//        app.terminate()
     }
 
 }

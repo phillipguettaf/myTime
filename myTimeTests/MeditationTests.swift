@@ -13,17 +13,12 @@ class MeditationTests: XCTestCase {
 
     var meditation: TimerControllerView = TimerControllerView();
 
-    
     override func setUp() {
         meditation = TimerControllerView();
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
+    // Test Circle Shape
     func testBreathingShape() {
-        //    let guess = timerController.circleLayer.opacity + 5
         
         let ifTapped = meditation.tapped
         
@@ -34,36 +29,18 @@ class MeditationTests: XCTestCase {
             XCTAssertEqual(meditation.countdownTrackLayer.opacity, 1)
         }
         
+        // Correct properties
         XCTAssertEqual(meditation.darkColor, UIColor(red: 33/255, green: 79/255, blue: 81/255, alpha: 1.0).cgColor)
-    
-        
-        
     }
     
+    // Test Timing of Breathing
     func testTimeInterval() {
         
+        let duration = meditation.duration + 20
+        XCTAssertEqual(duration, 30)
         
-        let guess = meditation.duration + 20
-        XCTAssertEqual(guess, 30)
-        
-        let initial = meditation.duration
-        XCTAssertEqual(initial, 10)
+        let initialStartDuration = meditation.duration
+        XCTAssertEqual(initialStartDuration, 10)
     }
     
 }
-
-// make at least four separate unit tests
-// containing pre-conditions, actions, post-conditions and Assertions
-//
-//}
-
-//func testScoreIsComputed() {
-//    // 1. given
-//    let guess = sut.targetValue + 5
-//
-//    // 2. when
-//    sut.check(guess: guess)
-//
-//    // 3. then
-//    XCTAssertEqual(sut.scoreRound, 95, "Score computed from guess is wrong")
-//}
